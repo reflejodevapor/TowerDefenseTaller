@@ -405,7 +405,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 66d37b0749854f54e96491404c31d9e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  meta: {fileID: 38556367}
+  meta: {fileID: 38556363}
+  velocidad: 0.1
+  vida: 100
+  danio: 5
+  dinero: 10
 --- !u!1 &1208387130
 GameObject:
   m_ObjectHideFlags: 0
@@ -542,8 +546,8 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1724731050}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: -10}
+  m_LocalRotation: {x: -0.155335, y: 0.7781125, z: -0.21184276, w: -0.5705565}
+  m_LocalPosition: {x: 17.214502, y: 8.784003, z: 3.0558116}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
