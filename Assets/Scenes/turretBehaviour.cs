@@ -29,7 +29,7 @@ namespace turretGame{
 		void OnTriggerStay(Collider _col){
 			if(LockOn == false){
 				Debug.Log("entró al del lockon");
-				if(_col.gameObject.CompareTag("Enemy")){
+				if(_col.gameObject.CompareTag("Enemigo")){
 					Debug.Log("entró al del tag");
 					enemyObjective = _col.gameObject;
 					InvokeRepeating("Shoot",turretRateOfFire,turretRateOfFire);
