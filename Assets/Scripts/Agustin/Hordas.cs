@@ -16,6 +16,12 @@ public class Hordas : MonoBehaviour
     // Lista de los enemigos a generar
     public List<GameObject> Enemy = new List<GameObject>();
 
+    // Cuantas hordas habra por nivel
+    public int NumeroHordas;
+
+    // Contador que te dice en que horda estas
+    int ContadorHorda;
+
     // Use this for initialization
     void Start()
     {
