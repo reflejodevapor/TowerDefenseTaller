@@ -62,12 +62,17 @@ public class Hordas : MonoBehaviour
 
     void GenerarEnemigos()
     {
+        // Esto esta poco optimizado, vere la manera de hacerlo mejor pero por el momento esto fue lo unico que se me ocurrio 
+
+        // Vaciamos la lista
         Enemy.Clear();
 
         for(int i = 0; i < NumeroEnemigos; i++)
         {
+            // Añadimos los prefabs a la lista
             Enemy.Add(Enemigo);
 
+            // Los genera
             Enemy[i] = Instantiate(Enemigo, new Vector3(0, 0, 0), Quaternion.identity);
         }
 

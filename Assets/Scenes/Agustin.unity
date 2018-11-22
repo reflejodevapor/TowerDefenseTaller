@@ -202,7 +202,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4802584d22367464b94eabb177076529, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Caja: {fileID: 1088937138230664, guid: 19868e52f63a3cd42a0b1f7ac8dccd81, type: 2}
+  Enemigo: {fileID: 1088937138230664, guid: 19868e52f63a3cd42a0b1f7ac8dccd81, type: 2}
   NumeroEnemigos: 5
   Enemy: []
 --- !u!1 &2121849485
