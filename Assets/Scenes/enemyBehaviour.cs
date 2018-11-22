@@ -14,12 +14,5 @@ namespace turretGame{
 		void Update () {
 			
 		}
-
-		void OnColliderEnter(Collider _col){
-			if(_col.gameObject.CompareTag("bullet")){
-				Destroy(_col.gameObject);
-				Destroy(this.gameObject);
-			}
-		}
 	}
 }

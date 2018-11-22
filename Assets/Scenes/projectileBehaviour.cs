@@ -17,5 +17,9 @@ namespace turretGame{
 
 		this.transform.Translate(Vector3.forward * projectileSpeed * Time.deltaTime,Space.Self);
 		}
+
+		void OnCollisionEnter(Collision _col){
+		}
+
 	}
 }
