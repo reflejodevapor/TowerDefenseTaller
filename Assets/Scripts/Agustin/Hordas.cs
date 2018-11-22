@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class Hordas : MonoBehaviour
 {
+    // Booleano del estado de los enemigos
+    bool TodosMuertos;
+
     // Prefab del Enemigo
     public GameObject Caja;
 
@@ -16,6 +19,8 @@ public class Hordas : MonoBehaviour
     // Use this for initialization
     void Start()
     {
+        TodosMuertos = false;
+
         for(int i = 0; i < NumeroEnemigos; i++)
         {
             // Añade el GameObject a la Lista
@@ -34,19 +39,50 @@ public class Hordas : MonoBehaviour
             Debug.Log("Mate a un enemigo");
             MatarEnemigo();
         }
+
+        // Suponemos que todos los enemigos ya murieron
+        TodosMuertos = true;
+        for (int i = 0; i < NumeroEnemigos; i++)
+        {
+            // Checamos que asi sea
+            if(Enemy[i].activeSelf == true)
+            {
+                // En caso de que no esten todos muertos regresamos la variable a falso
+                TodosMuertos = false;
+            }
+        }
+
+        // Si todos estan muertos...
+        if(TodosMuertos == true)
+        {
+            // Aumentamos los enemigos y los volvemos a generar
+            NumeroEnemigos++;
+            GenerarEnemigos();
+        }
     }
 
     void GenerarEnemigos()
     {
-
+        for (int i = 0; i < NumeroEnemigos; i++)
+        {
+            if(Enemy[i] == null)
+            {
+                Enemy.Add(Caja);
+            }
+            else if (Enemy[i].activeSelf == false)
+            {
+                Enemy[i].SetActive(true);
+            }
+        }
     }
 
     void MatarEnemigo()
     {
         for(int i = 0; i < Enemy.Capacity; i++)
         {
-            if(Enemy[i].activeSelf == true)
+            if (Enemy[i].activeSelf == true)
             {
+                
                 Enemy[i].SetActive(false);
                 return;
             }
