@@ -8,7 +8,7 @@ public class Hordas : MonoBehaviour
     bool TodosMuertos;
 
     // Prefab del Enemigo
-    public GameObject Caja;
+    public GameObject Enemigo;
 
     // Numero de enemigos que hay en una sola horda
     public int NumeroEnemigos;
@@ -24,10 +24,10 @@ public class Hordas : MonoBehaviour
         for(int i = 0; i < NumeroEnemigos; i++)
         {
             // Añade el GameObject a la Lista
-            Enemy.Add(Caja);
+            Enemy.Add(Enemigo);
 
             // Instancia a todos los enemigos empezando el juego
-            Enemy[i] = Instantiate(Caja, new Vector3(0, 0, 0), Quaternion.identity);
+            Enemy[i] = Instantiate(Enemigo, new Vector3(0, 0, 0), Quaternion.identity);
         }
     }
 
@@ -36,7 +36,6 @@ public class Hordas : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            Debug.Log("Mate a un enemigo");
             MatarEnemigo();
         }
 
@@ -63,7 +62,16 @@ public class Hordas : MonoBehaviour
 
     void GenerarEnemigos()
     {
-        for (int i = 0; i < NumeroEnemigos; i++)
+        Enemy.Clear();
+
+        for(int i = 0; i < NumeroEnemigos; i++)
+        {
+            Enemy.Add(Enemigo);
+
+            Enemy[i] = Instantiate(Enemigo, new Vector3(0, 0, 0), Quaternion.identity);
+        }
+
+        /*for (int i = 0; i < NumeroEnemigos; i++)
         {
             if(Enemy[i] == null)
             {
@@ -73,7 +81,7 @@ public class Hordas : MonoBehaviour
             {
                 Enemy[i].SetActive(true);
             }
-        }
+        }*/
     }
 
     void MatarEnemigo()
