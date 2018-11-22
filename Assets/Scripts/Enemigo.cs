@@ -9,6 +9,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
+[RequireComponent(typeof(NavMeshAgent))]
 public class Enemigo : MonoBehaviour {
 
     protected NavMeshAgent nav; // necesita el navmesh para hacer el pathfinding en automático
