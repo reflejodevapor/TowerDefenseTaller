@@ -19,6 +19,7 @@ namespace turretGame{
 		}
 
 		void OnCollisionEnter(Collision _col){
+
 		}
 
 	}
