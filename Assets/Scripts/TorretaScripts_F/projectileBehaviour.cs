@@ -18,7 +18,11 @@ namespace turretGame{
 		this.transform.Translate(Vector3.forward * projectileSpeed * Time.deltaTime,Space.Self);
 		}
 
-		void OnCollisionEnter(Collision _col){
+		void OnCollisionEnter(Collision _col)
+		{
+			_col.gameObject.GetComponent<Enemigo> ().Damage (1.0f);
+
+			Destroy (gameObject);
 
 		}
 

@@ -26,7 +26,8 @@ namespace turretGame{
 
 		}
 
-		void OnTriggerStay(Collider _col){
+		void OnTriggerStay(Collider _col)
+		{
 			if(LockOn == false){
 				Debug.Log("entró al del lockon");
 				if(_col.gameObject.CompareTag("Enemigo")){
@@ -43,6 +44,7 @@ namespace turretGame{
             if(other.gameObject.CompareTag("Enemigo"))
             {
                 LockOn = false;
+				CancelInvoke ("Shoot");
             }
         }
 

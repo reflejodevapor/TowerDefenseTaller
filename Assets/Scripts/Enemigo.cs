@@ -25,10 +25,15 @@ public class Enemigo : MonoBehaviour {
         nav = GetComponent<NavMeshAgent>();
         nav.speed = velocidad; //Setteamos la velocidad a la que se mueve
         v_velocidad = velocidad;
-        if (meta != null)
-        {
-            nav.SetDestination(meta.transform.position);
-        }
+
+		
+		if (meta == null)
+		{
+			meta = GameObject.FindGameObjectWithTag ("Meta").gameObject;
+		} 
+
+		nav.SetDestination (meta.transform.position);
+
         
 	}
 
@@ -54,7 +59,7 @@ public class Enemigo : MonoBehaviour {
             //TO DO : handle enemy death properly
 
             //De momento un Destroy está bien
-            Destroy(gameObject);
+			this.gameObject.SetActive(false);
         }
     }
 }

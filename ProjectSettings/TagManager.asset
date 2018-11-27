@@ -6,6 +6,9 @@ TagManager:
   tags:
   - Enemigo
   - Bala
+  - Enemy
+  - bullet
+  - Meta
   layers:
   - Default
   - TransparentFX
