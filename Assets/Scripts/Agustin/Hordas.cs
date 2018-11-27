@@ -27,7 +27,7 @@ public class Hordas : MonoBehaviour
     {
         TodosMuertos = false;
 
-        for(int i = 0; i < NumeroEnemigos; i++)
+        for (int i = 0; i < NumeroEnemigos; i++)
         {
             // Añade el GameObject a la Lista
             Enemy.Add(Enemigo);
@@ -50,7 +50,7 @@ public class Hordas : MonoBehaviour
         for (int i = 0; i < NumeroEnemigos; i++)
         {
             // Checamos que asi sea
-            if(Enemy[i].activeSelf == true)
+            if (Enemy[i].activeSelf == true)
             {
                 // En caso de que no esten todos muertos regresamos la variable a falso
                 TodosMuertos = false;
@@ -58,7 +58,7 @@ public class Hordas : MonoBehaviour
         }
 
         // Si todos estan muertos...
-        if(TodosMuertos == true)
+        if (TodosMuertos == true)
         {
             // Aumentamos los enemigos y los volvemos a generar
             NumeroEnemigos++;
@@ -72,7 +72,6 @@ public class Hordas : MonoBehaviour
 
         // Vaciamos la lista
         Enemy.Clear();
-
         for(int i = 0; i < NumeroEnemigos; i++)
         {
             // Añadimos los prefabs a la lista
@@ -82,26 +81,16 @@ public class Hordas : MonoBehaviour
             Enemy[i] = Instantiate(Enemigo, new Vector3(0, 0, 0), Quaternion.identity);
         }
 
-        /*for (int i = 0; i < NumeroEnemigos; i++)
-        {
-            if(Enemy[i] == null)
-            {
-                Enemy.Add(Caja);
-            }
-            else if (Enemy[i].activeSelf == false)
-            {
-                Enemy[i].SetActive(true);
-            }
-        }*/
+
     }
 
     void MatarEnemigo()
     {
-        for(int i = 0; i < Enemy.Capacity; i++)
+        for (int i = 0; i < Enemy.Capacity; i++)
         {
             if (Enemy[i].activeSelf == true)
             {
-                
+
                 Enemy[i].SetActive(false);
                 return;
             }
