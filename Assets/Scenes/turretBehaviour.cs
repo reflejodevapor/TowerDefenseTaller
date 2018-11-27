@@ -38,14 +38,22 @@ namespace turretGame{
 			}
 		}
 
-		void LevelUpTurret(){
+        private void OnTriggerExit(Collider other)
+        {
+            if(other.gameObject.CompareTag("Enemigo"))
+            {
+                LockOn = false;
+            }
+        }
+
+        void LevelUpTurret(){
 
 		}
 
 		void Shoot(){
-			Vector3 enemyLook = new Vector3(enemyObjective.transform.position.x,enemyObjective.transform.position.y,enemyObjective.transform.position.z);
 			Vector3 bulletPos = new Vector3(turretHead.transform.position.x,turretHead.transform.position.y + 3.0f,turretHead.transform.position.z);
-			turretHead.transform.LookAt(enemyLook);
+			turretHead.transform.LookAt(enemyObjective.transform.position);
+
 			GameObject bala = Instantiate(projectile, turretHead.transform.position,Quaternion.identity);
 			bala.transform.LookAt(enemyObjective.transform.position,Vector3.up);
 			//bala.transform.TransformDirection(enemyObjective.transform.position);

@@ -6,8 +6,9 @@ public class FastShootTorret : MonoBehaviour {
     public GameObject Bullet;
     public Transform Enemy;
 
+
     float FireRate;
-    float Damage;
+    //float Damage;
     // Use this for initialization
     void Start()
     {
