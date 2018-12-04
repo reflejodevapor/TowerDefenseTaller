@@ -75,16 +75,21 @@ public class Hordas : MonoBehaviour
 
         // Vaciamos la lista
         Enemy.Clear();
+
         for(int i = 0; i < NumeroEnemigos; i++)
         {
-            // Añadimos los prefabs a la lista
-            Enemy.Add(Enemigo);
-
-            // Los genera
-            Enemy[i] = Instantiate(Enemigo, spawnPoint, Quaternion.identity);
+            StartCoroutine(GenerarEnemigosDelay(i));
         }
+    }
 
+    IEnumerator GenerarEnemigosDelay(int pos)
+    {
+        yield return new WaitForSeconds(1.0f);
+        // Añadimos los prefabs a la listamvian
+        Enemy.Add(Enemigo);
 
+        // Los genera
+        Enemy[pos] = Instantiate(Enemigo, spawnPoint, Quaternion.identity);
     }
 
     void MatarEnemigo()
