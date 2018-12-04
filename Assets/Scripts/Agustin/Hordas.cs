@@ -9,7 +9,6 @@ public class Hordas : MonoBehaviour
     // Booleano del estado de los enemigos
     bool TodosMuertos;
 
-
     // Prefab del Enemigo
     public GameObject Enemigo;
 
@@ -32,10 +31,9 @@ public class Hordas : MonoBehaviour
 
         for (int i = 0; i < NumeroEnemigos; i++)
         {
-            // Añade el GameObject a la Lista
             Enemy.Add(Enemigo);
 
-            // Instancia a todos los enemigos empezando el juego
+            // Los genera
             Enemy[i] = Instantiate(Enemigo, spawnPoint, Quaternion.identity);
         }
     }
@@ -50,7 +48,7 @@ public class Hordas : MonoBehaviour
 
         // Suponemos que todos los enemigos ya murieron
         TodosMuertos = true;
-        for (int i = 0; i < NumeroEnemigos; i++)
+        for (int i = 0; i < Enemy.Count; i++)
         {
             // Checamos que asi sea
             if (Enemy[i].activeSelf == true)
@@ -78,14 +76,17 @@ public class Hordas : MonoBehaviour
 
         for(int i = 0; i < NumeroEnemigos; i++)
         {
-            StartCoroutine(GenerarEnemigosDelay(i));
+            Enemy.Add(Enemigo);
+
+            // Los genera
+            Enemy[i] = Instantiate(Enemigo, spawnPoint, Quaternion.identity);
         }
     }
 
     IEnumerator GenerarEnemigosDelay(int pos)
     {
         yield return new WaitForSeconds(1.0f);
-        // Añadimos los prefabs a la listamvian
+        // Añadimos los prefabs a la lista
         Enemy.Add(Enemigo);
 
         // Los genera
