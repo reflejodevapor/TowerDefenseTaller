@@ -4,8 +4,11 @@ using UnityEngine;
 
 public class Hordas : MonoBehaviour
 {
+    public Vector3 spawnPoint;
+
     // Booleano del estado de los enemigos
     bool TodosMuertos;
+
 
     // Prefab del Enemigo
     public GameObject Enemigo;
@@ -33,7 +36,7 @@ public class Hordas : MonoBehaviour
             Enemy.Add(Enemigo);
 
             // Instancia a todos los enemigos empezando el juego
-            Enemy[i] = Instantiate(Enemigo, new Vector3(0, 0, 0), Quaternion.identity);
+            Enemy[i] = Instantiate(Enemigo, spawnPoint, Quaternion.identity);
         }
     }
 
@@ -78,7 +81,7 @@ public class Hordas : MonoBehaviour
             Enemy.Add(Enemigo);
 
             // Los genera
-            Enemy[i] = Instantiate(Enemigo, new Vector3(0, 0, 0), Quaternion.identity);
+            Enemy[i] = Instantiate(Enemigo, spawnPoint, Quaternion.identity);
         }
 
 

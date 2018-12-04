@@ -1358,6 +1358,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4802584d22367464b94eabb177076529, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spawnPoint: {x: 14, y: 1, z: -13}
   Enemigo: {fileID: 1189051722466374, guid: 872d7a077af8fbc47b112f6de9d6d89a, type: 2}
   NumeroEnemigos: 2
   Enemy: []
