@@ -23,17 +23,18 @@ namespace turretGame{
 		
 		// Update is called once per frame
 		void Update () {
-
+            Debug.Log(LockOn);
 		}
 
 		void OnTriggerStay(Collider _col)
 		{
 			if(LockOn == false){
-				Debug.Log("entró al del lockon");
+				
 				if(_col.gameObject.CompareTag("Enemigo")){
-					Debug.Log("entró al del tag");
+					
 					enemyObjective = _col.gameObject;
-					InvokeRepeating("Shoot",turretRateOfFire,turretRateOfFire);
+                    Invoke("Shoot", turretRateOfFire);
+					//InvokeRepeating("Shoot",turretRateOfFire,turretRateOfFire);
 					LockOn = true;
 				}
 			}
@@ -58,7 +59,9 @@ namespace turretGame{
 
 			GameObject bala = Instantiate(projectile, turretHead.transform.position,Quaternion.identity);
 			bala.transform.LookAt(enemyObjective.transform.position,Vector3.up);
-			//bala.transform.TransformDirection(enemyObjective.transform.position);
+            //bala.transform.TransformDirection(enemyObjective.transform.position);
+
+            LockOn = false;
 		}
 
 	}

@@ -21,6 +21,8 @@ public class Enemigo : MonoBehaviour {
     [SerializeField] protected float danio; // Daño que causa con cada ataque
     [SerializeField] protected float dinero; // El dinero que suelta al morir
 
+
+
 	void Start () {
         nav = GetComponent<NavMeshAgent>();
         nav.speed = velocidad; //Setteamos la velocidad a la que se mueve
@@ -58,7 +60,7 @@ public class Enemigo : MonoBehaviour {
             vida = 0;
             //TO DO : handle enemy death properly
 
-            //De momento un Destroy está bien
+           
 			this.gameObject.SetActive(false);
         }
     }

@@ -22,9 +22,10 @@ namespace turretGame{
 		{
 			_col.gameObject.GetComponent<Enemigo> ().Damage (1.0f);
 
-			Destroy (gameObject);
+            this.gameObject.SetActive(false);
 
-		}
 
-	}
+        }
+
+    }
 }
