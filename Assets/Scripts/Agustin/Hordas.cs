@@ -29,23 +29,20 @@ public class Hordas : MonoBehaviour
     {
         TodosMuertos = false;
 
-        for (int i = 0; i < NumeroEnemigos; i++)
+        /*for (int i = 0; i < NumeroEnemigos; i++)
         {
             Enemy.Add(Enemigo);
 
             // Los genera
             Enemy[i] = Instantiate(Enemigo, spawnPoint, Quaternion.identity);
-        }
+        }*/
+
+        StartCoroutine("GenerarEnemigos");
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            MatarEnemigo();
-        }
-
         // Suponemos que todos los enemigos ya murieron
         TodosMuertos = true;
         for (int i = 0; i < Enemy.Count; i++)
@@ -63,16 +60,19 @@ public class Hordas : MonoBehaviour
         {
             // Aumentamos los enemigos y los volvemos a generar
             NumeroEnemigos++;
-            GenerarEnemigos();
+
+            // Vaciamos la lista
+            Enemy.Clear();
+
+            //GenerarEnemigos();
+
+            StartCoroutine("GenerarEnemigos");
         }
     }
 
-    void GenerarEnemigos()
+    IEnumerator GenerarEnemigos()
     {
         // Esto esta poco optimizado, vere la manera de hacerlo mejor pero por el momento esto fue lo unico que se me ocurrio 
-
-        // Vaciamos la lista
-        Enemy.Clear();
 
         for(int i = 0; i < NumeroEnemigos; i++)
         {
@@ -80,29 +80,8 @@ public class Hordas : MonoBehaviour
 
             // Los genera
             Enemy[i] = Instantiate(Enemigo, spawnPoint, Quaternion.identity);
-        }
-    }
 
-    IEnumerator GenerarEnemigosDelay(int pos)
-    {
-        yield return new WaitForSeconds(1.0f);
-        // Añadimos los prefabs a la lista
-        Enemy.Add(Enemigo);
-
-        // Los genera
-        Enemy[pos] = Instantiate(Enemigo, spawnPoint, Quaternion.identity);
-    }
-
-    void MatarEnemigo()
-    {
-        for (int i = 0; i < Enemy.Capacity; i++)
-        {
-            if (Enemy[i].activeSelf == true)
-            {
-
-                Enemy[i].SetActive(false);
-                return;
-            }
+            yield return new WaitForSeconds(1.0f);
         }
     }
 }
