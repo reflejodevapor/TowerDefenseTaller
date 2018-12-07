@@ -29,20 +29,17 @@ public class Hordas : MonoBehaviour
     {
         TodosMuertos = false;
 
-        /*for (int i = 0; i < NumeroEnemigos; i++)
-        {
-            Enemy.Add(Enemigo);
-
-            // Los genera
-            Enemy[i] = Instantiate(Enemigo, spawnPoint, Quaternion.identity);
-        }*/
-
         StartCoroutine("GenerarEnemigos");
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            MatarEnemigo();
+        }
+
         // Suponemos que todos los enemigos ya murieron
         TodosMuertos = true;
         for (int i = 0; i < Enemy.Count; i++)
@@ -81,7 +78,20 @@ public class Hordas : MonoBehaviour
             // Los genera
             Enemy[i] = Instantiate(Enemigo, spawnPoint, Quaternion.identity);
 
-            yield return new WaitForSeconds(1.0f);
+            yield return new WaitForSeconds(2.0f);
+        }
+    }
+
+    void MatarEnemigo()
+    {
+        for (int i = 0; i < Enemy.Capacity; i++)
+        {
+            if (Enemy[i].activeSelf == true)
+            {
+
+                Enemy[i].SetActive(false);
+                return;
+            }
         }
     }
 }

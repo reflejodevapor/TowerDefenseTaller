@@ -203,7 +203,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnPoint: {x: 0, y: 0, z: 0}
-  Enemigo: {fileID: 1126295580259864, guid: 19868e52f63a3cd42a0b1f7ac8dccd81, type: 2}
+  Enemigo: {fileID: 1074959537833062, guid: 19868e52f63a3cd42a0b1f7ac8dccd81, type: 2}
   NumeroEnemigos: 5
   Enemy: []
   NumeroHordas: 0
