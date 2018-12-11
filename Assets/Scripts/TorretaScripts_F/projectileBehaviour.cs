@@ -20,9 +20,13 @@ namespace turretGame{
 
 		void OnTriggerEnter(Collider _col)
 		{
-			_col.gameObject.GetComponent<Enemigo> ().Damage (1.0f);
+            if(_col.gameObject.GetComponent<Enemigo>() != null)
+            {
+                _col.gameObject.GetComponent<Enemigo>().Damage(1.0f);
 
-            this.gameObject.SetActive(false);
+                this.gameObject.SetActive(false);
+            }
+
 
 
         }
