@@ -5,25 +5,16 @@ using UnityEngine.UI;
 public class UIManager : MonoBehaviour {
 
     public GameObject goVidaBase;
-    public float vidaBase;
-    public Text vidaBaseTxt; 
 
-	// Use this for initialization
-	void Start ()
-    {
-        vidaBase = 100;
+    public static float vidaBase;
+    public static int dinero;
 
-        vidaBaseTxt =  goVidaBase.GetComponent<Text>();
-		
-	}
+
+    public Text vidaBaseTxt;
+    public Text dineroTxt;
+
+
+
 	
-	// Update is called once per frame
-	void Update () 
-    {
 
-        vidaBaseTxt.text = vidaBase.ToString();
-
-        vidaBase = vidaBase -  Time.deltaTime;
-		
-	}
 }
