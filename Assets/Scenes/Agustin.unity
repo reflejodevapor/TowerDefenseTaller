@@ -202,9 +202,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4802584d22367464b94eabb177076529, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Enemigo: {fileID: 1088937138230664, guid: 19868e52f63a3cd42a0b1f7ac8dccd81, type: 2}
+  spawnPoint: {x: 0, y: 0, z: 0}
+  Enemigo: {fileID: 1074959537833062, guid: 19868e52f63a3cd42a0b1f7ac8dccd81, type: 2}
   NumeroEnemigos: 5
   Enemy: []
+  NumeroHordas: 0
 --- !u!1 &2121849485
 GameObject:
   m_ObjectHideFlags: 0
