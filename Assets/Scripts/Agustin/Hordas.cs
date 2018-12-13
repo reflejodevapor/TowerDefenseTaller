@@ -22,7 +22,7 @@ public class Hordas : MonoBehaviour
     public int NumeroHordas;
 
     // Contador que te dice en que horda estas
-    int ContadorHorda;
+	int ContadorHorda = 0;
 
     // Use this for initialization
     void Start()
@@ -55,15 +55,24 @@ public class Hordas : MonoBehaviour
         // Si todos estan muertos...
         if (TodosMuertos == true)
         {
-            // Aumentamos los enemigos y los volvemos a generar
-            NumeroEnemigos++;
+			ContadorHorda++;
 
-            // Vaciamos la lista
-            Enemy.Clear();
+			if (ContadorHorda < NumeroHordas) {
+				// Aumentamos los enemigos y los volvemos a generar
+				NumeroEnemigos++;
 
-            //GenerarEnemigos();
+				// Vaciamos la lista
+				Enemy.Clear ();
 
-            StartCoroutine("GenerarEnemigos");
+				//GenerarEnemigos();
+
+				StartCoroutine ("GenerarEnemigos");
+			} else 
+			{
+				Debug.Log ("Maximo de hordas");
+			}
+
+
         }
     }
 
