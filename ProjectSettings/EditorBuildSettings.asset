@@ -5,7 +5,13 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/SampleScene.unity
     guid: 99c9720ab356a0642a771bea13969a05
+  - enabled: 1
+    path: Assets/Scenes/MainTitle.unity
+    guid: dc9c90463ffd34f4b97cdc201019fca4
+  - enabled: 1
+    path: Assets/Scenes/PuebaNavMesh.unity
+    guid: f7f3fb19ed3ce1f4e86614d5b5f32ba6
   m_configObjects: {}

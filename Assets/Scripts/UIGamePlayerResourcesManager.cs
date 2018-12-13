@@ -8,6 +8,7 @@ public class UIGamePlayerResourcesManager : MonoBehaviour
     public GameObject paletaDeRecursos;
     public GameObject imagenBloqueadora;
     UnityEngine.EventSystems.EventSystem evento; //Crea evento
+    public LayerMask capaSlots;
 
     public Vector3 posicionAInstanciar;
 
@@ -28,7 +29,7 @@ public class UIGamePlayerResourcesManager : MonoBehaviour
 
             RaycastHit hitCast;
 
-            if (Physics.Raycast(ray, out hitCast, Mathf.Infinity))
+            if (Physics.Raycast(ray, out hitCast, Mathf.Infinity, capaSlots))
             {
                 print("<color=green> Se lanzó un raycast y colisionó con  :::: </color>" + hitCast.collider);
 

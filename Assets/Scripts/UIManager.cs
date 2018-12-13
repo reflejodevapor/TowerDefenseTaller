@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
+
 public class UIManager : MonoBehaviour {
 
     public GameObject goVidaBase;
@@ -29,6 +31,6 @@ public class UIManager : MonoBehaviour {
         }
     }
 
-	
+
 
 }
