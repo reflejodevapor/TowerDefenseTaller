@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Hordas : MonoBehaviour
 {
+    // Posicion del cual apareceran los enemigos
     public Vector3 spawnPoint;
 
     // Booleano del estado de los enemigos
@@ -11,6 +12,8 @@ public class Hordas : MonoBehaviour
 
     // Prefab del Enemigo
     public GameObject Enemigo;
+
+    public GameObject[] Prefabs_Enemigos;
 
     // Numero de enemigos que hay en una sola horda
     public int NumeroEnemigos;
@@ -73,10 +76,16 @@ public class Hordas : MonoBehaviour
 
         for(int i = 0; i < NumeroEnemigos; i++)
         {
-            Enemy.Add(Enemigo);
+            //Enemy.Add(Enemigo);
+
+            // Agarra uno de los prefabs al azar
+            int PosPrefab = Random.Range(0, Prefabs_Enemigos.Length);
+
+            // Lo añadimos a la lista de enemigos
+            Enemy.Add(Prefabs_Enemigos[PosPrefab]);
 
             // Los genera
-            Enemy[i] = Instantiate(Enemigo, spawnPoint, Quaternion.identity);
+            Enemy[i] = Instantiate(Prefabs_Enemigos[PosPrefab], spawnPoint, Quaternion.identity);
 
             yield return new WaitForSeconds(2.0f);
         }
