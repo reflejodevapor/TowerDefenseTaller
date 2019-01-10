@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Hordas : MonoBehaviour
 {
@@ -72,7 +73,11 @@ public class Hordas : MonoBehaviour
 				StartCoroutine ("GenerarEnemigos");
 			} else 
 			{
-				Debug.Log ("Maximo de hordas");
+                // Escena en la que estamos actualmente
+                int EscenaActual = SceneManager.GetActiveScene().buildIndex;
+                
+                //Carga el siguiente nivel
+                SceneManager.LoadScene(EscenaActual + 1);
 			}
 
 

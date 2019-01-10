@@ -207,10 +207,10 @@ MonoBehaviour:
   Prefabs_Enemigos:
   - {fileID: 1074959537833062, guid: 19868e52f63a3cd42a0b1f7ac8dccd81, type: 2}
   - {fileID: 1448145813369926, guid: 06f620d3a11aa2248b1bbea6478f684c, type: 2}
-  - {fileID: 1189051722466374, guid: 872d7a077af8fbc47b112f6de9d6d89a, type: 2}
+  - {fileID: 1336202859277410, guid: 1bd45c3b8e8373745b0a0df78f0c06d2, type: 2}
   NumeroEnemigos: 5
   Enemy: []
-  NumeroHordas: 0
+  NumeroHordas: 3
 --- !u!1 &2103058031
 GameObject:
   m_ObjectHideFlags: 0

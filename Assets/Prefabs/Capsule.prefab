@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 33394881311846988}
   - component: {fileID: 23481757663176884}
   - component: {fileID: 136365604076385994}
+  - component: {fileID: 114790661384603236}
   m_Layer: 0
   m_Name: Capsule
   m_TagString: Untagged
@@ -84,6 +85,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1336202859277410}
   m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &114790661384603236
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1336202859277410}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee4d06723cb11db42a44eeecde98b083, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Velocidad: {x: 1, y: 0, z: 0}
 --- !u!136 &136365604076385994
 CapsuleCollider:
   m_ObjectHideFlags: 1

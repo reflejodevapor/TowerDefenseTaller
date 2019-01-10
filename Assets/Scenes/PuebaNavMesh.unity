@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -593,6 +593,10 @@ Prefab:
       propertyPath: meta
       value: 
       objectReference: {fileID: 38556363}
+    - target: {fileID: 1189051722466374, guid: 872d7a077af8fbc47b112f6de9d6d89a, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 872d7a077af8fbc47b112f6de9d6d89a, type: 2}
   m_IsPrefabAsset: 0
@@ -1029,6 +1033,11 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!1 &1191479477 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1189051722466374, guid: 872d7a077af8fbc47b112f6de9d6d89a,
+    type: 2}
+  m_PrefabInternal: {fileID: 640059814}
 --- !u!1 &1208387130
 GameObject:
   m_ObjectHideFlags: 0
@@ -1360,6 +1369,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnPoint: {x: 14, y: 1, z: -13}
   Enemigo: {fileID: 1189051722466374, guid: 872d7a077af8fbc47b112f6de9d6d89a, type: 2}
+  Prefabs_Enemigos:
+  - {fileID: 1189051722466374, guid: 872d7a077af8fbc47b112f6de9d6d89a, type: 2}
+  - {fileID: 1191479477}
+  - {fileID: 1191479477}
   NumeroEnemigos: 2
   Enemy: []
   NumeroHordas: 10
