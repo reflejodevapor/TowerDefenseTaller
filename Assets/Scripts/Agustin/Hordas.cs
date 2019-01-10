@@ -64,8 +64,6 @@ public class Hordas : MonoBehaviour
             // Vaciamos la lista
             Enemy.Clear();
 
-            //GenerarEnemigos();
-
             StartCoroutine("GenerarEnemigos");
         }
     }
@@ -73,11 +71,14 @@ public class Hordas : MonoBehaviour
     IEnumerator GenerarEnemigos()
     {
         // Esto esta poco optimizado, vere la manera de hacerlo mejor pero por el momento esto fue lo unico que se me ocurrio 
+        /*for(int i = 0; i < NumeroEnemigos; i++)
+        {
+            if(Enemy[i])
+        }*/
+
 
         for(int i = 0; i < NumeroEnemigos; i++)
         {
-            //Enemy.Add(Enemigo);
-
             // Agarra uno de los prefabs al azar
             int PosPrefab = Random.Range(0, Prefabs_Enemigos.Length);
 
@@ -97,7 +98,6 @@ public class Hordas : MonoBehaviour
         {
             if (Enemy[i].activeSelf == true)
             {
-
                 Enemy[i].SetActive(false);
                 return;
             }
