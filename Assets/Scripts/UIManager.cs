@@ -5,25 +5,30 @@ using UnityEngine.UI;
 public class UIManager : MonoBehaviour {
 
     public GameObject goVidaBase;
-    public float vidaBase;
-    public Text vidaBaseTxt; 
 
-	// Use this for initialization
-	void Start ()
+    public static float vidaBase;
+    public static int dinero;
+
+
+    public Text vidaBaseTxt;
+    public Text dineroTxt;
+
+    /// <summary>
+    /// Método para manejar cuando el enemigo llegó a la meta
+    /// </summary>
+    /// <param name="d"></param>
+    public static void RecibeDanio(float d)
     {
-        vidaBase = 100;
+        vidaBase -= d;
 
-        vidaBaseTxt =  goVidaBase.GetComponent<Text>();
-		
-	}
+        //Cuando ya valio pito
+        if (vidaBase <= 0)
+        {
+            vidaBase = 0;
+            //TO DO: Implementar el fin de juego
+        }
+    }
+
 	
-	// Update is called once per frame
-	void Update () 
-    {
 
-        vidaBaseTxt.text = vidaBase.ToString();
-
-        vidaBase = vidaBase -  Time.deltaTime;
-		
-	}
 }

@@ -19,7 +19,9 @@ public class Enemigo : MonoBehaviour {
     private float v_velocidad; // esto se usa solo para calcular los deltas de velocidad
     [SerializeField] protected float vida; //la cantidad de vida que puede recibir
     [SerializeField] protected float danio; // Daño que causa con cada ataque
-    [SerializeField] protected float dinero; // El dinero que suelta al morir
+    [SerializeField] protected int dinero; // El dinero que suelta al morir
+    [Tooltip("Distancia necesaria para contar que llegó a la meta")]
+    [SerializeField] protected float WinOffset; // Distancia necesaria para contar que llegó a la meta
 
 
 
@@ -46,6 +48,13 @@ public class Enemigo : MonoBehaviour {
             nav.speed = velocidad;
             v_velocidad = velocidad;
         }
+
+        //Para verificar cuando llegó a la meta
+        if(Vector3.Distance(transform.position, meta.transform.position) < WinOffset)
+        {
+            UIManager.RecibeDanio(danio);
+            gameObject.SetActive(false);
+        }
     }
 
     /// <summary>
@@ -59,9 +68,9 @@ public class Enemigo : MonoBehaviour {
         {
             vida = 0;
             //TO DO : handle enemy death properly
-
-           
-			this.gameObject.SetActive(false);
+            UIManager.dinero += dinero;
+            this.gameObject.SetActive(false);
+            
         }
     }
 }
