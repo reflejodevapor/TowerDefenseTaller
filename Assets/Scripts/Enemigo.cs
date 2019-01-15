@@ -7,50 +7,31 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.AI;
 
-[RequireComponent(typeof(NavMeshAgent))]
+
+
 public class Enemigo : MonoBehaviour {
 
-    protected NavMeshAgent nav; // necesita el navmesh para hacer el pathfinding en automático
+    
     [Header("Atributos del enemigo base")]
     [SerializeField] protected GameObject meta; // la posicion a donde se va a mover y también para reducir el daño al golpear
     [SerializeField] protected float velocidad; //Velocidad a la que se mueve
-    private float v_velocidad; // esto se usa solo para calcular los deltas de velocidad
+    
     [SerializeField] protected float vida; //la cantidad de vida que puede recibir
     [SerializeField] protected float danio; // Daño que causa con cada ataque
     [SerializeField] protected int dinero; // El dinero que suelta al morir
     [Tooltip("Distancia necesaria para contar que llegó a la meta")]
     [SerializeField] protected float WinOffset; // Distancia necesaria para contar que llegó a la meta
 
-
-
-	void Start () {
-        nav = GetComponent<NavMeshAgent>();
-        nav.speed = velocidad; //Setteamos la velocidad a la que se mueve
-        v_velocidad = velocidad;
-
-		
-		if (meta == null)
-		{
-			meta = GameObject.FindGameObjectWithTag ("Meta").gameObject;
-		} 
-
-		nav.SetDestination (meta.transform.position);
-
-        
-	}
-
     void Update()
     {
-        if (v_velocidad != velocidad)
-        {
-            nav.speed = velocidad;
-            v_velocidad = velocidad;
-        }
+        OnUpdate();
+    }
 
+    protected virtual void OnUpdate() //Esta base existe para poder ser sobrecargada en los objetos que de aqui hereden
+    {
         //Para verificar cuando llegó a la meta
-        if(Vector3.Distance(transform.position, meta.transform.position) < WinOffset)
+        if (Vector3.Distance(transform.position, meta.transform.position) < WinOffset)
         {
             UIManager.RecibeDanio(danio);
             gameObject.SetActive(false);
