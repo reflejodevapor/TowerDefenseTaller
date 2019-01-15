@@ -17,7 +17,36 @@ public class Hordas : MonoBehaviour
     public int NumeroEnemigos;
 
     // Lista de los enemigos a generar
-    public List<GameObject> Enemy = new List<GameObject>();
+    //public List<GameObject> Enemy = new List<GameObject>();
+
+     // Pool de los enemigos
+    public List<GameObject> Enemigos = new List<GameObject>();
+
+    // Funcion para generar a los enemigos
+    GameObject GenerateEnemy()
+    {
+        for (int i = 0; i < Enemigos.Count; i++)
+        {
+            // Checamos si todos los enemigos estan apagados
+            if(Enemigos[i].activeSelf == false)
+            {
+                // Lo volvemos a activar
+                Enemigos[i].SetActive(true);
+                // Reseteamos su posicion
+                Enemigos[i].transform.position = spawnPoint;
+                return Enemigos[i];
+            }
+        }
+
+        // Si no hay ningun enemigo en el pool, agarramos un prefab al azar
+        int PrefabSeleccionado = Random.Range(0, Prefabs_Enemigos.Length);
+
+        // Generamos el enemigo nuevo
+        GameObject go = Instantiate(Prefabs_Enemigos[PrefabSeleccionado], spawnPoint, Quaternion.identity);
+        // Lo agregamos al pool
+        Enemigos.Add(go);
+        return go;
+    }
 
     // Cuantas hordas habra por nivel
     public int NumeroHordas;
@@ -43,10 +72,10 @@ public class Hordas : MonoBehaviour
 
         // Suponemos que todos los enemigos ya murieron
         TodosMuertos = true;
-        for (int i = 0; i < Enemy.Count; i++)
+        for (int i = 0; i < Enemigos.Count; i++)
         {
             // Checamos que asi sea
-            if (Enemy[i].activeSelf == true)
+            if (Enemigos[i].activeSelf == true)
             {
                 // En caso de que no esten todos muertos regresamos la variable a falso
                 TodosMuertos = false;
@@ -63,7 +92,7 @@ public class Hordas : MonoBehaviour
 				NumeroEnemigos++;
 
                 // Vaciamos la lista
-                Enemy.Clear();
+                //Enemy.Clear();
 
 				StartCoroutine ("GenerarEnemigos");
 			} else 
@@ -81,16 +110,18 @@ public class Hordas : MonoBehaviour
     {
         // Esto esta poco optimizado, vere la manera de hacerlo mejor pero por el momento esto fue lo unico que se me ocurrio 
 
-        for(int i = 0; i < NumeroEnemigos; i++)
+        for (int i = 0; i < NumeroEnemigos; i++)
         {
             // Agarra uno de los prefabs al azar
-            int PosPrefab = Random.Range(0, Prefabs_Enemigos.Length);
+            /* int PosPrefab = Random.Range(0, Prefabs_Enemigos.Length);
 
-            // Lo añadimos a la lista de enemigos
-            Enemy.Add(Prefabs_Enemigos[PosPrefab]);
+             // Lo añadimos a la lista de enemigos
+             Enemy.Add(Prefabs_Enemigos[PosPrefab]);
 
-            // Los genera
-            Enemy[i] = Instantiate(Prefabs_Enemigos[PosPrefab], spawnPoint, Quaternion.identity);
+             // Los genera  
+             Enemy[i] = Instantiate(Prefabs_Enemigos[PosPrefab], spawnPoint, Quaternion.identity);*/
+
+            GameObject Enemigo = GenerateEnemy();
 
             yield return new WaitForSeconds(2.0f);
         }
@@ -98,12 +129,12 @@ public class Hordas : MonoBehaviour
 
     void MatarEnemigo()
     {
-        for (int i = 0; i < Enemy.Capacity; i++)
+        for (int i = 0; i < Enemigos.Capacity; i++)
         {
-            if (Enemy[i].activeSelf == true)
+            if (Enemigos[i].activeSelf == true)
             {
 
-                Enemy[i].SetActive(false);
+                Enemigos[i].SetActive(false);
                 return;
             }
         }
