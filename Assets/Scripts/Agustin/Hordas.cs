@@ -11,9 +11,6 @@ public class Hordas : MonoBehaviour
     // Booleano del estado de los enemigos
     bool TodosMuertos;
 
-    // Prefab del Enemigo
-    public GameObject Enemigo;
-
     public GameObject[] Prefabs_Enemigos;
 
     // Numero de enemigos que hay en una sola horda
@@ -65,10 +62,8 @@ public class Hordas : MonoBehaviour
 				// Aumentamos los enemigos y los volvemos a generar
 				NumeroEnemigos++;
 
-				// Vaciamos la lista
-				Enemy.Clear ();
-
-				//GenerarEnemigos();
+                // Vaciamos la lista
+                Enemy.Clear();
 
 				StartCoroutine ("GenerarEnemigos");
 			} else 
@@ -79,8 +74,6 @@ public class Hordas : MonoBehaviour
                 //Carga el siguiente nivel
                 SceneManager.LoadScene(EscenaActual + 1);
 			}
-
-
         }
     }
 
@@ -90,8 +83,6 @@ public class Hordas : MonoBehaviour
 
         for(int i = 0; i < NumeroEnemigos; i++)
         {
-            //Enemy.Add(Enemigo);
-
             // Agarra uno de los prefabs al azar
             int PosPrefab = Random.Range(0, Prefabs_Enemigos.Length);
 
