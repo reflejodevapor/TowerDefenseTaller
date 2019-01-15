@@ -7,7 +7,7 @@ public class UIManager : MonoBehaviour {
     public GameObject goVidaBase;
 
     public static float vidaBase;
-    public static int dinero;
+    public static float dinero;
 
 
     public Text vidaBaseTxt;
