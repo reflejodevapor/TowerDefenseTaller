@@ -9,6 +9,11 @@ TagManager:
   - Enemy
   - bullet
   - Meta
+  - FriendSlot
+  - Canvas
+  - ImagenBloqueo
+  - unused
+  - used
   layers:
   - Default
   - TransparentFX
