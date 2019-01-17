@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657868, g: 0.49641263, b: 0.57481706, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -813,6 +813,21 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 114947724202433726, guid: 5b943581f7addae4ab115988b2165fbe,
+        type: 2}
+      propertyPath: maxLevel
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114947724202433726, guid: 5b943581f7addae4ab115988b2165fbe,
+        type: 2}
+      propertyPath: StatLvl2
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 114947724202433726, guid: 5b943581f7addae4ab115988b2165fbe,
+        type: 2}
+      propertyPath: Statlvl3
+      value: 0.1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5b943581f7addae4ab115988b2165fbe, type: 2}
   m_IsPrefabAsset: 0
@@ -1368,13 +1383,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnPoint: {x: 14, y: 1, z: -13}
-  Enemigo: {fileID: 1189051722466374, guid: 872d7a077af8fbc47b112f6de9d6d89a, type: 2}
   Prefabs_Enemigos:
   - {fileID: 1189051722466374, guid: 872d7a077af8fbc47b112f6de9d6d89a, type: 2}
   - {fileID: 1191479477}
   - {fileID: 1191479477}
   NumeroEnemigos: 2
-  Enemy: []
+  Enemigos: []
   NumeroHordas: 10
 --- !u!114 &1724731055
 MonoBehaviour:

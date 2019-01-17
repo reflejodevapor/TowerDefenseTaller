@@ -27,8 +27,6 @@ namespace turretGame{
                 this.gameObject.SetActive(false);
             }
 
-
-
         }
 
     }
