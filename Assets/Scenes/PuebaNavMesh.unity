@@ -284,12 +284,12 @@ GameObject:
   - component: {fileID: 106281149}
   - component: {fileID: 106281148}
   m_Layer: 5
-  m_Name: PanelPausa (1)
+  m_Name: PanelNivelSuperado
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &106281147
 RectTransform:
   m_ObjectHideFlags: 0
@@ -307,7 +307,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 686, y: -10.12}
+  m_AnchoredPosition: {x: -1, y: -10.12}
   m_SizeDelta: {x: -424.3, y: -208.66}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &106281148
@@ -1158,6 +1158,7 @@ GameObject:
   - component: {fileID: 393276360}
   - component: {fileID: 393276359}
   - component: {fileID: 393276358}
+  - component: {fileID: 393276362}
   m_Layer: 9
   m_Name: Slot (5)
   m_TagString: FriendSlot
@@ -1234,6 +1235,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &393276362
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 393276357}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3058188aec9236b4da5677c53d3d7e1a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  used: 0
 --- !u!1 &420664764
 GameObject:
   m_ObjectHideFlags: 0
@@ -1447,6 +1460,7 @@ GameObject:
   - component: {fileID: 557994109}
   - component: {fileID: 557994108}
   - component: {fileID: 557994107}
+  - component: {fileID: 557994111}
   m_Layer: 9
   m_Name: Slot (2)
   m_TagString: FriendSlot
@@ -1523,6 +1537,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &557994111
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 557994106}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3058188aec9236b4da5677c53d3d7e1a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  used: 0
 --- !u!1 &602411948
 GameObject:
   m_ObjectHideFlags: 0
@@ -1661,7 +1687,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &719777884
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1800,6 +1826,7 @@ GameObject:
   - component: {fileID: 830253399}
   - component: {fileID: 830253398}
   - component: {fileID: 830253397}
+  - component: {fileID: 830253401}
   m_Layer: 9
   m_Name: Slot (1)
   m_TagString: FriendSlot
@@ -1876,6 +1903,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &830253401
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 830253396}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3058188aec9236b4da5677c53d3d7e1a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  used: 0
 --- !u!1 &920073616
 GameObject:
   m_ObjectHideFlags: 0
@@ -1887,6 +1926,7 @@ GameObject:
   - component: {fileID: 920073619}
   - component: {fileID: 920073618}
   - component: {fileID: 920073617}
+  - component: {fileID: 920073621}
   m_Layer: 9
   m_Name: Slot
   m_TagString: FriendSlot
@@ -1963,6 +2003,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &920073621
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 920073616}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3058188aec9236b4da5677c53d3d7e1a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  used: 0
 --- !u!1001 &994689343
 Prefab:
   m_ObjectHideFlags: 0
@@ -2783,6 +2835,7 @@ GameObject:
   - component: {fileID: 1440370384}
   - component: {fileID: 1440370383}
   - component: {fileID: 1440370382}
+  - component: {fileID: 1440370386}
   m_Layer: 9
   m_Name: Slot (4)
   m_TagString: FriendSlot
@@ -2859,6 +2912,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1440370386
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1440370381}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3058188aec9236b4da5677c53d3d7e1a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  used: 0
 --- !u!1 &1453590134
 GameObject:
   m_ObjectHideFlags: 0
@@ -3427,6 +3492,7 @@ GameObject:
   - component: {fileID: 1931385511}
   - component: {fileID: 1931385510}
   - component: {fileID: 1931385509}
+  - component: {fileID: 1931385513}
   m_Layer: 9
   m_Name: Slot (3)
   m_TagString: FriendSlot
@@ -3503,6 +3569,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1931385513
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1931385508}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3058188aec9236b4da5677c53d3d7e1a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  used: 0
 --- !u!1 &2088135393
 GameObject:
   m_ObjectHideFlags: 0

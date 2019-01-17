@@ -9,7 +9,7 @@ public class UIGamePlayerResourcesManager : MonoBehaviour
     public GameObject imagenBloqueadora;
     UnityEngine.EventSystems.EventSystem evento; //Crea evento
     public LayerMask capaSlots;
-
+    public GameObject slotToUse;
     public Vector3 posicionAInstanciar;
 
     // Use this for initialization
@@ -37,10 +37,15 @@ public class UIGamePlayerResourcesManager : MonoBehaviour
                 {
                     if (hitCast.collider.gameObject.CompareTag("FriendSlot"))
                     {
-                        posicionAInstanciar = hitCast.collider.gameObject.transform.position;
-                        paletaDeRecursos.SetActive(true);
-                        imagenBloqueadora.SetActive(true);
-                        paletaDeRecursos.transform.position = Camera.main.WorldToScreenPoint(hitCast.collider.gameObject.transform.position);
+                        if (hitCast.collider.gameObject.GetComponent<SlotStatus>().used == false)
+                        {
+                            posicionAInstanciar = hitCast.collider.gameObject.transform.position;
+                            paletaDeRecursos.SetActive(true);
+                            imagenBloqueadora.SetActive(true);
+                            paletaDeRecursos.transform.position = Camera.main.WorldToScreenPoint(hitCast.collider.gameObject.transform.position);
+                            slotToUse = hitCast.collider.gameObject;
+                        }
+
                     }
 
 
@@ -52,6 +57,7 @@ public class UIGamePlayerResourcesManager : MonoBehaviour
 
     public void DesactivaPaleta()
     {
+        slotToUse = null;
         paletaDeRecursos.SetActive(false);
         imagenBloqueadora.SetActive(false);
     }
@@ -61,5 +67,6 @@ public class UIGamePlayerResourcesManager : MonoBehaviour
     {
         GameObject amigo = Instantiate(amigo1, posicionAInstanciar, Quaternion.identity);
         amigo.transform.position = posicionAInstanciar;
+        slotToUse.GetComponent<SlotStatus>().used = true;
     }
 }

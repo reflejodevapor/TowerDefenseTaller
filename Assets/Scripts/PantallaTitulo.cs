@@ -9,5 +9,29 @@ public class PantallaTitulo : MonoBehaviour {
         SceneManager.LoadScene(nombre);
     }
 
+    public GameObject imagenBloqueo;
+    public GameObject panelCreditos;
+    public GameObject panelOpciones;
+    public void EstadoPanelCreditos(bool _estado)
+    {
+        imagenBloqueo.SetActive(_estado);
+        panelCreditos.SetActive(_estado);
+    }
+
+    public void EstadoPanelOpciones(bool _estado)
+    {
+        imagenBloqueo.SetActive(_estado);
+        panelOpciones.SetActive(_estado);
+    }
+
+
+    public void EstadoUI(bool _estado)
+    {
+        imagenBloqueo.SetActive(_estado);
+        panelOpciones.SetActive(_estado);
+        panelCreditos.SetActive(_estado);
+
+    }
+
 
 }
