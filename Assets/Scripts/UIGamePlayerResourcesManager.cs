@@ -30,7 +30,6 @@ public class UIGamePlayerResourcesManager : MonoBehaviour
 
             if (Physics.Raycast(ray, out hitCast, Mathf.Infinity))
             {
-                print("<color=green> Se lanzó un raycast y colisionó con  :::: </color>" + hitCast.collider);
 
                 if (hitCast.collider != null)
                 {
