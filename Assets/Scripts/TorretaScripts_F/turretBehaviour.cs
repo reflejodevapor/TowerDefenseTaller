@@ -10,7 +10,7 @@ namespace turretGame{
 		public GameObject projectile;	
 		public GameObject turretHead;
 		public float turretHealth;
-		public float turretRateOfFire;
+		public static  float turretRateOfFire;
 		public int maxLevel = 3;
 
 

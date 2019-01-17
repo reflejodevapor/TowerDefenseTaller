@@ -32,7 +32,7 @@ public class CoolDowns : MonoBehaviour {
             moneyText.enabled = false;
             speedText.enabled = false;
             airStrikeText.enabled = false;
-            turretGame.turretBehaviour.turretRateOfFire = 300;
+            turretGame.turretBehaviour.turretRateOfFire = 0.8f;
         }
 
         // Update is called once per frame

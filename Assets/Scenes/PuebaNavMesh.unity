@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -532,11 +532,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &449097286 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1852482210518962, guid: 5b943581f7addae4ab115988b2165fbe,
-    type: 2}
-  m_PrefabInternal: {fileID: 994689343}
 --- !u!1 &557994106
 GameObject:
   m_ObjectHideFlags: 0
@@ -1294,12 +1289,12 @@ Prefab:
     - target: {fileID: 224551909449509698, guid: 3004cf61e4a33bb48af1571742efe8fb,
         type: 2}
       propertyPath: m_RootOrder
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224343646798281332, guid: 3004cf61e4a33bb48af1571742efe8fb,
         type: 2}
       propertyPath: m_RootOrder
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1104383974236098, guid: 3004cf61e4a33bb48af1571742efe8fb, type: 2}
       propertyPath: m_IsActive
@@ -1972,7 +1967,7 @@ MonoBehaviour:
   paletaDeRecursos: {fileID: 1025368680}
   imagenBloqueadora: {fileID: 1025368681}
   posicionAInstanciar: {x: 0, y: 0, z: 0}
-  amigo1: {fileID: 449097286}
+  amigo1: {fileID: 1852482210518962, guid: 5b943581f7addae4ab115988b2165fbe, type: 2}
 --- !u!114 &1724731056
 MonoBehaviour:
   m_ObjectHideFlags: 0
