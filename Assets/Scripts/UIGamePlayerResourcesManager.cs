@@ -34,6 +34,7 @@ public class UIGamePlayerResourcesManager : MonoBehaviour
 
                 if (hitCast.collider != null)
                 {
+                    Debug.Log("HIT "+  hitCast.collider.gameObject);
                     if (hitCast.collider.gameObject.CompareTag("FriendSlot"))
                     {
                         if (hitCast.collider.gameObject.GetComponent<SlotStatus>().used == false)

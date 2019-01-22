@@ -21,12 +21,9 @@ using UnityEngine;
 			
 		}
 		
-		// Update is called once per frame
-		void Update () {
-            Debug.Log(LockOn);
-		}
 
-		void OnTriggerStay(Collider _col)
+
+		void OnTriggerEnter(Collider _col)
 		{
 			if(LockOn == false){
 				
