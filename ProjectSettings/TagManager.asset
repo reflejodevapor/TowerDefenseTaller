@@ -12,6 +12,8 @@ TagManager:
   - FriendSlot
   - Canvas
   - ImagenBloqueo
+  - unused
+  - used
   layers:
   - Default
   - TransparentFX

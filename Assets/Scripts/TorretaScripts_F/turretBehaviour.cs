@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace turretGame{
+
 	public class turretBehaviour : MonoBehaviour {
 
 		public bool LockOn = false;
@@ -10,7 +10,7 @@ namespace turretGame{
 		public GameObject projectile;	
 		public GameObject turretHead;
 		public float turretHealth;
-		public float turretRateOfFire;
+		public static float turretRateOfFire;
 		public int maxLevel = 3;
 
 
@@ -65,4 +65,3 @@ namespace turretGame{
 		}
 
 	}
-}
