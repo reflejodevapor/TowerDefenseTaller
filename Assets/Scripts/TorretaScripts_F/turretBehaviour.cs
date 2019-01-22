@@ -11,24 +11,31 @@ namespace turretGame{
 		public GameObject turretHead;
 		public float turretHealth;
 		public float turretRateOfFire;
-		public int maxLevel = 3;
+		public float turretDamage;
+		public int maxLevel;
 
-		//Stats base para las torretas
-		public float StatLvl2 = 0.05f;
-		public float Statlvl3 = 0.1f;
+		// Nivel actual de la torreta
+		public int Level = 1;
 
-
+		public List<float> FireRates = new List<float>();
+		public List<float> damages = new List<float> ();
 
 		// Use this for initialization
-		void Start () {
+		void Start () 
+		{
 			
-			
+			turretRateOfFire = FireRates [0];
+			turretDamage = damages [0];
 		}
 		
 		// Update is called once per frame
-		void Update () {
+		void Update () 
+		{
             Debug.Log(LockOn);
-			LevelUpTurret ();
+
+			if(Input.GetKeyDown(KeyCode.Alpha1)){LevelUpTurret ();}
+
+			if (Input.GetKeyDown (KeyCode.Alpha2)) {LevelDownTurret ();}			
 
 		}
 
@@ -57,33 +64,29 @@ namespace turretGame{
 
 
 		///es solo un test para saber si cambia de fire rate la torreta. 
-        void LevelUpTurret(){
+        void LevelUpTurret()
+		{
+			
+				if (Level < maxLevel) 
+					{                                  
+						Level = Level + 1;
+					}
 
-			if (Input.GetKeyDown(KeyCode.Alpha1)) //en esta condicional originalmente va la interaccion con las variables del compra o mejora.
-			{
-				maxLevel = 2;
+				turretRateOfFire = FireRates [Level - 1];
+				turretDamage = damages [Level - 1];
 				Debug.Log ("Aqui subio de nivel");
-				if (maxLevel == 2)
-				{
-					turretRateOfFire -= StatLvl2;
-					Debug.Log ("Estoy disparando de acuerdo a la mejora del level 2");
-				}
-			}
-
-			if (Input.GetKeyDown(KeyCode.Alpha2)) //en esta condicional originalmente va la interaccion con las variables del compra o mejora.
-			{
-				maxLevel = 3;
-				Debug.Log ("Aqui subio de nivel de nuevo ");
-				if (maxLevel == 3)
-				{
-					turretRateOfFire -= Statlvl3;
-					Debug.Log ("mejora de level 3");
-				}
-			}
-
+				print (turretRateOfFire);
 
 		}
 
+		void LevelDownTurret()
+		{
+				if (Level > 1) 
+					{                                  
+						Level--;
+					}
+				turretRateOfFire = FireRates [Level - 1];
+		}
 
 
 		void Shoot(){
@@ -92,6 +95,8 @@ namespace turretGame{
 
 			GameObject bala = Instantiate(projectile, turretHead.transform.position,Quaternion.identity);
 			bala.transform.LookAt(enemyObjective.transform.position,Vector3.up);
+
+			bala.GetComponent<projectileBehaviour> ().TorretaPadre = turretHead.gameObject;
             //bala.transform.TransformDirection(enemyObjective.transform.position);
 
             LockOn = false;

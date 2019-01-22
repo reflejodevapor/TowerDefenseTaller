@@ -781,6 +781,21 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 114947724202433726, guid: 5b943581f7addae4ab115988b2165fbe,
+        type: 2}
+      propertyPath: Niveles.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 114947724202433726, guid: 5b943581f7addae4ab115988b2165fbe,
+        type: 2}
+      propertyPath: damages.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 114947724202433726, guid: 5b943581f7addae4ab115988b2165fbe,
+        type: 2}
+      propertyPath: FireRates.Array.size
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 4359491895747476, guid: 5b943581f7addae4ab115988b2165fbe, type: 2}
       propertyPath: m_LocalPosition.x
       value: -9.2
@@ -816,7 +831,7 @@ Prefab:
     - target: {fileID: 114947724202433726, guid: 5b943581f7addae4ab115988b2165fbe,
         type: 2}
       propertyPath: maxLevel
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 114947724202433726, guid: 5b943581f7addae4ab115988b2165fbe,
         type: 2}
@@ -827,6 +842,41 @@ Prefab:
         type: 2}
       propertyPath: Statlvl3
       value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114947724202433726, guid: 5b943581f7addae4ab115988b2165fbe,
+        type: 2}
+      propertyPath: FireRates.Array.data[0]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114947724202433726, guid: 5b943581f7addae4ab115988b2165fbe,
+        type: 2}
+      propertyPath: FireRates.Array.data[1]
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114947724202433726, guid: 5b943581f7addae4ab115988b2165fbe,
+        type: 2}
+      propertyPath: FireRates.Array.data[2]
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 114947724202433726, guid: 5b943581f7addae4ab115988b2165fbe,
+        type: 2}
+      propertyPath: damages.Array.data[0]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114947724202433726, guid: 5b943581f7addae4ab115988b2165fbe,
+        type: 2}
+      propertyPath: damages.Array.data[1]
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114947724202433726, guid: 5b943581f7addae4ab115988b2165fbe,
+        type: 2}
+      propertyPath: damages.Array.data[2]
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 114947724202433726, guid: 5b943581f7addae4ab115988b2165fbe,
+        type: 2}
+      propertyPath: turretDamage
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5b943581f7addae4ab115988b2165fbe, type: 2}
