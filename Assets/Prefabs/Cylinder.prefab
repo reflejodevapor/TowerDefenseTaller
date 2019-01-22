@@ -118,6 +118,7 @@ MonoBehaviour:
   vida: 3
   danio: 5
   dinero: 10
+  WinOffset: 0
 --- !u!136 &136101860227624986
 CapsuleCollider:
   m_ObjectHideFlags: 1
@@ -146,7 +147,7 @@ NavMeshAgent:
   m_AngularSpeed: 120
   m_StoppingDistance: 0
   m_AutoTraverseOffMeshLink: 1
-  m_AutoBraking: 1
+  m_AutoBraking: 0
   m_AutoRepath: 1
   m_Height: 2
   m_BaseOffset: 1
