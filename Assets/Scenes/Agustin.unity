@@ -123,6 +123,7 @@ GameObject:
   - component: {fileID: 1269980645}
   - component: {fileID: 1269980644}
   - component: {fileID: 1269980643}
+  - component: {fileID: 1269980647}
   - component: {fileID: 1269980646}
   m_Layer: 0
   m_Name: Main Camera
@@ -197,20 +198,42 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1269980642}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4802584d22367464b94eabb177076529, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   spawnPoint: {x: 0, y: 0, z: 0}
-  Enemigo: {fileID: 1074959537833062, guid: 19868e52f63a3cd42a0b1f7ac8dccd81, type: 2}
   Prefabs_Enemigos:
   - {fileID: 1074959537833062, guid: 19868e52f63a3cd42a0b1f7ac8dccd81, type: 2}
   - {fileID: 1448145813369926, guid: 06f620d3a11aa2248b1bbea6478f684c, type: 2}
   - {fileID: 1336202859277410, guid: 1bd45c3b8e8373745b0a0df78f0c06d2, type: 2}
   NumeroEnemigos: 5
-  Enemy: []
+  Enemigos: []
   NumeroHordas: 3
+--- !u!114 &1269980647
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1269980642}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00c8a46c015b7b64da099cb9f34e93e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnPoint: {x: 0, y: 0, z: 0}
+  Prefabs_Enemigos:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  NumeroHordas: 3
+  Enemigos:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!1 &2103058031
 GameObject:
   m_ObjectHideFlags: 0

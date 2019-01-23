@@ -14,7 +14,7 @@ public class HordasPredefinidas : MonoBehaviour {
     public GameObject[] Prefabs_Enemigos;
 
     // Numero de enemigos que hay en una sola horda
-    public int NumeroEnemigos;
+    //public int NumeroEnemigos;
 
     // Cuantas hordas habra por nivel
     public int NumeroHordas;
@@ -87,7 +87,7 @@ public class HordasPredefinidas : MonoBehaviour {
             if (ContadorHorda < NumeroHordas)
             {
                 // Aumentamos los enemigos y los volvemos a generar
-                NumeroEnemigos++;
+                //NumeroEnemigos++;
 
                 // Vaciamos la lista
                 //Enemy.Clear();
@@ -109,7 +109,7 @@ public class HordasPredefinidas : MonoBehaviour {
     {
         // Esto esta poco optimizado, vere la manera de hacerlo mejor pero por el momento esto fue lo unico que se me ocurrio 
 
-        for (int i = 0; i < NumeroEnemigos; i++)
+        for (int i = 0; i < Enemigos.Capacity; i++)
         {
 
             GameObject Enemigo = GenerateEnemy();
@@ -120,7 +120,7 @@ public class HordasPredefinidas : MonoBehaviour {
 
     void MatarEnemigo()
     {
-        for (int i = 0; i < Enemigos.Capacity; i++)
+        for (int i = 0; i < Enemigos.Count; i++)
         {
             if (Enemigos[i].activeSelf == true)
             {
