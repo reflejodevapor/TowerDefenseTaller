@@ -11,9 +11,6 @@ public class Hordas : MonoBehaviour
     // Booleano del estado de los enemigos
     bool TodosMuertos;
 
-    // Prefab del Enemigo
-    public GameObject Enemigo;
-
     public GameObject[] Prefabs_Enemigos;
 
     // Numero de enemigos que hay en una sola horda
