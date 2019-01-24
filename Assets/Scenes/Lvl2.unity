@@ -475,6 +475,7 @@ GameObject:
   - component: {fileID: 48021029}
   - component: {fileID: 48021028}
   - component: {fileID: 48021027}
+  - component: {fileID: 48021030}
   m_Layer: 9
   m_Name: Torreta (11)
   m_TagString: FriendSlot
@@ -549,6 +550,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 48021025}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &48021030
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 48021025}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3058188aec9236b4da5677c53d3d7e1a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  used: 0
 --- !u!1 &56010046
 GameObject:
   m_ObjectHideFlags: 0
@@ -2003,6 +2016,7 @@ GameObject:
   - component: {fileID: 144211077}
   - component: {fileID: 144211076}
   - component: {fileID: 144211075}
+  - component: {fileID: 144211079}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -2092,13 +2106,25 @@ RectTransform:
   - {fileID: 34838678}
   - {fileID: 1161795923}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &144211079
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 144211074}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3058188aec9236b4da5677c53d3d7e1a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  used: 0
 --- !u!1 &150564236
 GameObject:
   m_ObjectHideFlags: 0
@@ -2184,6 +2210,23 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 150564236}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &151627605 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1786385710039576, guid: c449c7e799ba23946801fdf5efcf5936,
+    type: 2}
+  m_PrefabInternal: {fileID: 307700282}
+--- !u!114 &151627609
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 151627605}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3058188aec9236b4da5677c53d3d7e1a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  used: 0
 --- !u!1 &152559118
 GameObject:
   m_ObjectHideFlags: 0
@@ -2402,7 +2445,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!1 &170855615
 GameObject:
@@ -2500,6 +2543,7 @@ GameObject:
   - component: {fileID: 175012600}
   - component: {fileID: 175012599}
   - component: {fileID: 175012598}
+  - component: {fileID: 175012601}
   m_Layer: 9
   m_Name: Torreta (6)
   m_TagString: FriendSlot
@@ -2574,6 +2618,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 175012596}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &175012601
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 175012596}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3058188aec9236b4da5677c53d3d7e1a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  used: 0
 --- !u!1 &179232062
 GameObject:
   m_ObjectHideFlags: 0
@@ -2841,7 +2897,7 @@ Transform:
   - {fileID: 419577077}
   - {fileID: 97306759}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &190625773
 GameObject:
@@ -3530,6 +3586,7 @@ GameObject:
   - component: {fileID: 226210107}
   - component: {fileID: 226210106}
   - component: {fileID: 226210105}
+  - component: {fileID: 226210108}
   m_Layer: 9
   m_Name: Torreta (2)
   m_TagString: FriendSlot
@@ -3604,6 +3661,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 226210103}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &226210108
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 226210103}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3058188aec9236b4da5677c53d3d7e1a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  used: 0
 --- !u!1 &232676636
 GameObject:
   m_ObjectHideFlags: 0
@@ -5014,6 +5083,7 @@ GameObject:
   - component: {fileID: 319291293}
   - component: {fileID: 319291292}
   - component: {fileID: 319291291}
+  - component: {fileID: 319291294}
   m_Layer: 9
   m_Name: Torreta (10)
   m_TagString: FriendSlot
@@ -5088,6 +5158,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 319291289}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &319291294
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 319291289}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3058188aec9236b4da5677c53d3d7e1a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  used: 0
 --- !u!1 &332971424
 GameObject:
   m_ObjectHideFlags: 0
@@ -5837,7 +5919,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4761203202659316, guid: 27104a544361da440bbe6b10e7755406, type: 2}
       propertyPath: m_RootOrder
-      value: 7
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1785783886701648, guid: 27104a544361da440bbe6b10e7755406, type: 2}
       propertyPath: m_TagString
@@ -6616,6 +6698,23 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 445205492}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &453363634 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1786385710039576, guid: c449c7e799ba23946801fdf5efcf5936,
+    type: 2}
+  m_PrefabInternal: {fileID: 921521485}
+--- !u!114 &453363638
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 453363634}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3058188aec9236b4da5677c53d3d7e1a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  used: 0
 --- !u!1 &465561678
 GameObject:
   m_ObjectHideFlags: 0
@@ -7116,6 +7215,7 @@ GameObject:
   - component: {fileID: 496013827}
   - component: {fileID: 496013826}
   - component: {fileID: 496013825}
+  - component: {fileID: 496013828}
   m_Layer: 9
   m_Name: Torreta (3)
   m_TagString: FriendSlot
@@ -7190,6 +7290,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 496013823}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &496013828
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 496013823}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3058188aec9236b4da5677c53d3d7e1a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  used: 0
 --- !u!1 &496659803
 GameObject:
   m_ObjectHideFlags: 0
@@ -7623,6 +7735,7 @@ GameObject:
   - component: {fileID: 556530295}
   - component: {fileID: 556530294}
   - component: {fileID: 556530293}
+  - component: {fileID: 556530296}
   m_Layer: 9
   m_Name: Torreta (9)
   m_TagString: FriendSlot
@@ -7697,6 +7810,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 556530291}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &556530296
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 556530291}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3058188aec9236b4da5677c53d3d7e1a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  used: 0
 --- !u!1 &564007773
 GameObject:
   m_ObjectHideFlags: 0
@@ -8431,7 +8556,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &637573370
 GameObject:
@@ -8775,6 +8900,7 @@ GameObject:
   - component: {fileID: 678241271}
   - component: {fileID: 678241270}
   - component: {fileID: 678241269}
+  - component: {fileID: 678241272}
   m_Layer: 9
   m_Name: Torreta (7)
   m_TagString: FriendSlot
@@ -8849,6 +8975,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 678241267}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &678241272
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 678241267}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3058188aec9236b4da5677c53d3d7e1a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  used: 0
 --- !u!1 &678845385
 GameObject:
   m_ObjectHideFlags: 0
@@ -12200,48 +12338,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1036130576}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1001 &1040616526
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 4538320259470760, guid: 3fec75519d234f7428f64a7222ca5f33, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: -6.7904
-      objectReference: {fileID: 0}
-    - target: {fileID: 4538320259470760, guid: 3fec75519d234f7428f64a7222ca5f33, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 2.73
-      objectReference: {fileID: 0}
-    - target: {fileID: 4538320259470760, guid: 3fec75519d234f7428f64a7222ca5f33, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 18.663
-      objectReference: {fileID: 0}
-    - target: {fileID: 4538320259470760, guid: 3fec75519d234f7428f64a7222ca5f33, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: -0.7071067
-      objectReference: {fileID: 0}
-    - target: {fileID: 4538320259470760, guid: 3fec75519d234f7428f64a7222ca5f33, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 8.060924e-15
-      objectReference: {fileID: 0}
-    - target: {fileID: 4538320259470760, guid: 3fec75519d234f7428f64a7222ca5f33, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0.00000010677016
-      objectReference: {fileID: 0}
-    - target: {fileID: 4538320259470760, guid: 3fec75519d234f7428f64a7222ca5f33, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 4538320259470760, guid: 3fec75519d234f7428f64a7222ca5f33, type: 2}
-      propertyPath: m_RootOrder
-      value: 3
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 3fec75519d234f7428f64a7222ca5f33, type: 2}
-  m_IsPrefabAsset: 0
 --- !u!1 &1045323062
 GameObject:
   m_ObjectHideFlags: 0
@@ -12710,18 +12806,6 @@ Prefab:
       propertyPath: m_Name
       value: Torreta (17)
       objectReference: {fileID: 0}
-    - target: {fileID: 4830661237041330, guid: c449c7e799ba23946801fdf5efcf5936, type: 2}
-      propertyPath: m_LocalScale.y
-      value: 0.14999999
-      objectReference: {fileID: 0}
-    - target: {fileID: 1786385710039576, guid: c449c7e799ba23946801fdf5efcf5936, type: 2}
-      propertyPath: m_TagString
-      value: FriendSlot
-      objectReference: {fileID: 0}
-    - target: {fileID: 1786385710039576, guid: c449c7e799ba23946801fdf5efcf5936, type: 2}
-      propertyPath: m_Layer
-      value: 9
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c449c7e799ba23946801fdf5efcf5936, type: 2}
   m_IsPrefabAsset: 0
@@ -13056,9 +13140,9 @@ MonoBehaviour:
   capaSlots:
     serializedVersion: 2
     m_Bits: 512
-  slotToUse: {fileID: 0}
+  slotToUse: {fileID: 1852482210518962, guid: 5b943581f7addae4ab115988b2165fbe, type: 2}
   posicionAInstanciar: {x: 0, y: 0, z: 0}
-  amigo1: {fileID: 0}
+  amigo1: {fileID: 1852482210518962, guid: 5b943581f7addae4ab115988b2165fbe, type: 2}
 --- !u!114 &1112259370
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13071,7 +13155,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnPoint: {x: 14, y: 1, z: -13}
-  Enemigo: {fileID: 1189051722466374, guid: 872d7a077af8fbc47b112f6de9d6d89a, type: 2}
+  Enemigo: {fileID: 1283595083621938, guid: d34f0df8c1281e6489b727d6b96526f0, type: 2}
   NumeroEnemigos: 2
   Enemy: []
   NumeroHordas: 10
@@ -13944,6 +14028,23 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1161795922}
   m_CullTransparentMesh: 0
+--- !u!1 &1164720318 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1786385710039576, guid: c449c7e799ba23946801fdf5efcf5936,
+    type: 2}
+  m_PrefabInternal: {fileID: 773941642}
+--- !u!114 &1164720322
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1164720318}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3058188aec9236b4da5677c53d3d7e1a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  used: 0
 --- !u!1 &1169246847
 GameObject:
   m_ObjectHideFlags: 0
@@ -16810,6 +16911,7 @@ GameObject:
   - component: {fileID: 1545814839}
   - component: {fileID: 1545814838}
   - component: {fileID: 1545814837}
+  - component: {fileID: 1545814840}
   m_Layer: 9
   m_Name: Torreta (4)
   m_TagString: FriendSlot
@@ -16884,6 +16986,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1545814835}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1545814840
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1545814835}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3058188aec9236b4da5677c53d3d7e1a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  used: 0
 --- !u!1 &1563909555
 GameObject:
   m_ObjectHideFlags: 0
@@ -17832,6 +17946,7 @@ GameObject:
   - component: {fileID: 1624835917}
   - component: {fileID: 1624835916}
   - component: {fileID: 1624835915}
+  - component: {fileID: 1624835918}
   m_Layer: 9
   m_Name: Torreta (8)
   m_TagString: FriendSlot
@@ -17906,6 +18021,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1624835913}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1624835918
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1624835913}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3058188aec9236b4da5677c53d3d7e1a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  used: 0
 --- !u!1 &1632260358
 GameObject:
   m_ObjectHideFlags: 0
@@ -18756,48 +18883,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1691414883}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1001 &1702362979
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 4299297865511066, guid: 515ae42d9dc90494085b6b0283211818, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: -7.42
-      objectReference: {fileID: 0}
-    - target: {fileID: 4299297865511066, guid: 515ae42d9dc90494085b6b0283211818, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 0.19
-      objectReference: {fileID: 0}
-    - target: {fileID: 4299297865511066, guid: 515ae42d9dc90494085b6b0283211818, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 16.72
-      objectReference: {fileID: 0}
-    - target: {fileID: 4299297865511066, guid: 515ae42d9dc90494085b6b0283211818, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: -0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 4299297865511066, guid: 515ae42d9dc90494085b6b0283211818, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4299297865511066, guid: 515ae42d9dc90494085b6b0283211818, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4299297865511066, guid: 515ae42d9dc90494085b6b0283211818, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 4299297865511066, guid: 515ae42d9dc90494085b6b0283211818, type: 2}
-      propertyPath: m_RootOrder
-      value: 4
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 515ae42d9dc90494085b6b0283211818, type: 2}
-  m_IsPrefabAsset: 0
 --- !u!1 &1706098976
 GameObject:
   m_ObjectHideFlags: 0
@@ -19531,6 +19616,7 @@ GameObject:
   - component: {fileID: 1740655046}
   - component: {fileID: 1740655045}
   - component: {fileID: 1740655044}
+  - component: {fileID: 1740655047}
   m_Layer: 9
   m_Name: Torreta (1)
   m_TagString: FriendSlot
@@ -19605,6 +19691,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1740655042}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1740655047
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1740655042}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3058188aec9236b4da5677c53d3d7e1a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  used: 0
 --- !u!1 &1744572045
 GameObject:
   m_ObjectHideFlags: 0
@@ -21997,6 +22095,23 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1898208187}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1903939606 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1786385710039576, guid: c449c7e799ba23946801fdf5efcf5936,
+    type: 2}
+  m_PrefabInternal: {fileID: 916803309}
+--- !u!114 &1903939610
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1903939606}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3058188aec9236b4da5677c53d3d7e1a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  used: 0
 --- !u!1 &1908767277
 GameObject:
   m_ObjectHideFlags: 0
@@ -22242,6 +22357,23 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1938294987}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1950965312 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1786385710039576, guid: c449c7e799ba23946801fdf5efcf5936,
+    type: 2}
+  m_PrefabInternal: {fileID: 83889457}
+--- !u!114 &1950965316
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1950965312}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3058188aec9236b4da5677c53d3d7e1a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  used: 0
 --- !u!1 &1961423272
 GameObject:
   m_ObjectHideFlags: 0
@@ -22253,6 +22385,7 @@ GameObject:
   - component: {fileID: 1961423276}
   - component: {fileID: 1961423275}
   - component: {fileID: 1961423274}
+  - component: {fileID: 1961423277}
   m_Layer: 9
   m_Name: Torreta (5)
   m_TagString: FriendSlot
@@ -22327,6 +22460,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1961423272}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1961423277
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1961423272}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3058188aec9236b4da5677c53d3d7e1a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  used: 0
 --- !u!1 &1962106993
 GameObject:
   m_ObjectHideFlags: 0
@@ -23875,6 +24020,23 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2067928905}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &2070532813 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1786385710039576, guid: c449c7e799ba23946801fdf5efcf5936,
+    type: 2}
+  m_PrefabInternal: {fileID: 734888007}
+--- !u!114 &2070532817
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2070532813}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3058188aec9236b4da5677c53d3d7e1a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  used: 0
 --- !u!1 &2081371206
 GameObject:
   m_ObjectHideFlags: 0

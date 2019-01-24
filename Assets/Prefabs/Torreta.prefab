@@ -42,7 +42,6 @@ GameObject:
   - component: {fileID: 136391349310780146}
   - component: {fileID: 114947724202433726}
   - component: {fileID: 54137675153630014}
-  - component: {fileID: 114043302402403080}
   m_Layer: 0
   m_Name: cabezaTorreta
   m_TagString: Untagged
@@ -205,22 +204,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 14
   m_CollisionDetection: 0
---- !u!114 &114043302402403080
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1520210610806200}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 645d08f8024e6204882f2d22d6746a4b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  vida: 100
-  goImgVida: {fileID: 0}
-  imgVidaImg: {fileID: 0}
-  canvasG: {fileID: 0}
-  rectImgVida: {fileID: 0}
 --- !u!114 &114947724202433726
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -237,7 +220,6 @@ MonoBehaviour:
   projectile: {fileID: 1659989122864438, guid: 07d81cd5d2873a840af3b1306e33545d, type: 2}
   turretHead: {fileID: 1520210610806200}
   turretHealth: 24
-  turretRateOfFire: 0.25
   maxLevel: 3
 --- !u!136 &136391349310780146
 CapsuleCollider:
