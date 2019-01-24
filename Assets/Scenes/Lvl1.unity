@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -540,9 +540,9 @@ GameObject:
   - component: {fileID: 108720472}
   - component: {fileID: 108720471}
   - component: {fileID: 108720470}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: camino (26)
-  m_TagString: Untagged
+  m_TagString: enemyPath
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -934,9 +934,9 @@ GameObject:
   - component: {fileID: 142390853}
   - component: {fileID: 142390852}
   - component: {fileID: 142390851}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: camino (19)
-  m_TagString: Untagged
+  m_TagString: enemyPath
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -1019,9 +1019,9 @@ GameObject:
   - component: {fileID: 150564240}
   - component: {fileID: 150564239}
   - component: {fileID: 150564238}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: camino (4)
-  m_TagString: Untagged
+  m_TagString: enemyPath
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -1686,9 +1686,9 @@ GameObject:
   - component: {fileID: 193578175}
   - component: {fileID: 193578174}
   - component: {fileID: 193578173}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: camino (7)
-  m_TagString: Untagged
+  m_TagString: enemyPath
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -2039,9 +2039,9 @@ GameObject:
   - component: {fileID: 233568377}
   - component: {fileID: 233568376}
   - component: {fileID: 233568375}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: camino (17)
-  m_TagString: Untagged
+  m_TagString: enemyPath
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -2198,6 +2198,128 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 238915334}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1001 &250261075
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1591059925}
+    m_Modifications:
+    - target: {fileID: 224855447996664750, guid: dfa81b845a8edd746afbd767bf0f7b0b,
+        type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224855447996664750, guid: dfa81b845a8edd746afbd767bf0f7b0b,
+        type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224855447996664750, guid: dfa81b845a8edd746afbd767bf0f7b0b,
+        type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224855447996664750, guid: dfa81b845a8edd746afbd767bf0f7b0b,
+        type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224855447996664750, guid: dfa81b845a8edd746afbd767bf0f7b0b,
+        type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224855447996664750, guid: dfa81b845a8edd746afbd767bf0f7b0b,
+        type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224855447996664750, guid: dfa81b845a8edd746afbd767bf0f7b0b,
+        type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224855447996664750, guid: dfa81b845a8edd746afbd767bf0f7b0b,
+        type: 2}
+      propertyPath: m_RootOrder
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 224855447996664750, guid: dfa81b845a8edd746afbd767bf0f7b0b,
+        type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: 208
+      objectReference: {fileID: 0}
+    - target: {fileID: 224855447996664750, guid: dfa81b845a8edd746afbd767bf0f7b0b,
+        type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: -171
+      objectReference: {fileID: 0}
+    - target: {fileID: 224855447996664750, guid: dfa81b845a8edd746afbd767bf0f7b0b,
+        type: 2}
+      propertyPath: m_SizeDelta.x
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 224855447996664750, guid: dfa81b845a8edd746afbd767bf0f7b0b,
+        type: 2}
+      propertyPath: m_SizeDelta.y
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 224855447996664750, guid: dfa81b845a8edd746afbd767bf0f7b0b,
+        type: 2}
+      propertyPath: m_AnchorMin.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 224855447996664750, guid: dfa81b845a8edd746afbd767bf0f7b0b,
+        type: 2}
+      propertyPath: m_AnchorMin.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 224855447996664750, guid: dfa81b845a8edd746afbd767bf0f7b0b,
+        type: 2}
+      propertyPath: m_AnchorMax.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 224855447996664750, guid: dfa81b845a8edd746afbd767bf0f7b0b,
+        type: 2}
+      propertyPath: m_AnchorMax.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 224855447996664750, guid: dfa81b845a8edd746afbd767bf0f7b0b,
+        type: 2}
+      propertyPath: m_Pivot.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 224855447996664750, guid: dfa81b845a8edd746afbd767bf0f7b0b,
+        type: 2}
+      propertyPath: m_Pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114727489625496496, guid: dfa81b845a8edd746afbd767bf0f7b0b,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 534669909}
+    - target: {fileID: 114727489625496496, guid: dfa81b845a8edd746afbd767bf0f7b0b,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: button_airstrike_clicked
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: dfa81b845a8edd746afbd767bf0f7b0b, type: 2}
+  m_IsPrefabAsset: 0
+--- !u!114 &250261076 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114888522139057786, guid: dfa81b845a8edd746afbd767bf0f7b0b,
+    type: 2}
+  m_PrefabInternal: {fileID: 250261075}
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+--- !u!114 &250261077 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114727489625496496, guid: dfa81b845a8edd746afbd767bf0f7b0b,
+    type: 2}
+  m_PrefabInternal: {fileID: 250261075}
+  m_Script: {fileID: 1392445389, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!1 &276694105
 GameObject:
   m_ObjectHideFlags: 0
@@ -2464,9 +2586,9 @@ GameObject:
   - component: {fileID: 301650668}
   - component: {fileID: 301650667}
   - component: {fileID: 301650666}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: camino (20)
-  m_TagString: Untagged
+  m_TagString: enemyPath
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -3877,6 +3999,7 @@ GameObject:
   - component: {fileID: 534669908}
   - component: {fileID: 534669907}
   - component: {fileID: 534669906}
+  - component: {fileID: 534669909}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -3993,6 +4116,26 @@ MonoBehaviour:
   goVidaBase: {fileID: 376783192}
   vidaBaseTxt: {fileID: 1591059926}
   dineroTxt: {fileID: 2128870677}
+--- !u!114 &534669909
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 534669902}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae6043d86cf6832479c457768e386a56, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  airStrikeCoolDown: 180
+  instantMoneyMultiplierCoolDown: 120
+  doubleShootingSpeedCoolDown: 120
+  buttonAirStrike: {fileID: 250261077}
+  buttonMoneyMultiplier: {fileID: 1356506454}
+  buttonDoubleShootingSpeed: {fileID: 1887874966}
+  airStrikeText: {fileID: 250261076}
+  moneyText: {fileID: 1356506453}
+  speedText: {fileID: 1887874965}
 --- !u!1 &536165172
 GameObject:
   m_ObjectHideFlags: 0
@@ -4447,9 +4590,9 @@ GameObject:
   - component: {fileID: 669155097}
   - component: {fileID: 669155096}
   - component: {fileID: 669155095}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: camino (15)
-  m_TagString: Untagged
+  m_TagString: enemyPath
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -4715,9 +4858,9 @@ GameObject:
   - component: {fileID: 750779715}
   - component: {fileID: 750779714}
   - component: {fileID: 750779713}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: camino (2)
-  m_TagString: Untagged
+  m_TagString: enemyPath
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -5530,9 +5673,9 @@ GameObject:
   - component: {fileID: 933227625}
   - component: {fileID: 933227624}
   - component: {fileID: 933227623}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: camino (24)
-  m_TagString: Untagged
+  m_TagString: enemyPath
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -5747,9 +5890,9 @@ GameObject:
   - component: {fileID: 1035430017}
   - component: {fileID: 1035430016}
   - component: {fileID: 1035430015}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: camino (10)
-  m_TagString: Untagged
+  m_TagString: enemyPath
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -5959,9 +6102,9 @@ GameObject:
   - component: {fileID: 1052328377}
   - component: {fileID: 1052328376}
   - component: {fileID: 1052328375}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: camino (13)
-  m_TagString: Untagged
+  m_TagString: enemyPath
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -6604,9 +6747,9 @@ GameObject:
   - component: {fileID: 1218569737}
   - component: {fileID: 1218569736}
   - component: {fileID: 1218569735}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: camino (11)
-  m_TagString: Untagged
+  m_TagString: enemyPath
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -6689,9 +6832,9 @@ GameObject:
   - component: {fileID: 1232544411}
   - component: {fileID: 1232544410}
   - component: {fileID: 1232544409}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: camino (9)
-  m_TagString: Untagged
+  m_TagString: enemyPath
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -6774,9 +6917,9 @@ GameObject:
   - component: {fileID: 1254164150}
   - component: {fileID: 1254164149}
   - component: {fileID: 1254164148}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: camino (16)
-  m_TagString: Untagged
+  m_TagString: enemyPath
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -6859,9 +7002,9 @@ GameObject:
   - component: {fileID: 1281331967}
   - component: {fileID: 1281331966}
   - component: {fileID: 1281331965}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: camino (8)
-  m_TagString: Untagged
+  m_TagString: enemyPath
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -7188,6 +7331,128 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1319184028}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1001 &1356506452
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1591059925}
+    m_Modifications:
+    - target: {fileID: 224558642959048490, guid: 07e7bb7455c27884484b9039b52efcf2,
+        type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224558642959048490, guid: 07e7bb7455c27884484b9039b52efcf2,
+        type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224558642959048490, guid: 07e7bb7455c27884484b9039b52efcf2,
+        type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224558642959048490, guid: 07e7bb7455c27884484b9039b52efcf2,
+        type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224558642959048490, guid: 07e7bb7455c27884484b9039b52efcf2,
+        type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224558642959048490, guid: 07e7bb7455c27884484b9039b52efcf2,
+        type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224558642959048490, guid: 07e7bb7455c27884484b9039b52efcf2,
+        type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224558642959048490, guid: 07e7bb7455c27884484b9039b52efcf2,
+        type: 2}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 224558642959048490, guid: 07e7bb7455c27884484b9039b52efcf2,
+        type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: 272.71
+      objectReference: {fileID: 0}
+    - target: {fileID: 224558642959048490, guid: 07e7bb7455c27884484b9039b52efcf2,
+        type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: -171.40001
+      objectReference: {fileID: 0}
+    - target: {fileID: 224558642959048490, guid: 07e7bb7455c27884484b9039b52efcf2,
+        type: 2}
+      propertyPath: m_SizeDelta.x
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 224558642959048490, guid: 07e7bb7455c27884484b9039b52efcf2,
+        type: 2}
+      propertyPath: m_SizeDelta.y
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 224558642959048490, guid: 07e7bb7455c27884484b9039b52efcf2,
+        type: 2}
+      propertyPath: m_AnchorMin.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 224558642959048490, guid: 07e7bb7455c27884484b9039b52efcf2,
+        type: 2}
+      propertyPath: m_AnchorMin.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 224558642959048490, guid: 07e7bb7455c27884484b9039b52efcf2,
+        type: 2}
+      propertyPath: m_AnchorMax.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 224558642959048490, guid: 07e7bb7455c27884484b9039b52efcf2,
+        type: 2}
+      propertyPath: m_AnchorMax.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 224558642959048490, guid: 07e7bb7455c27884484b9039b52efcf2,
+        type: 2}
+      propertyPath: m_Pivot.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 224558642959048490, guid: 07e7bb7455c27884484b9039b52efcf2,
+        type: 2}
+      propertyPath: m_Pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114974499860188854, guid: 07e7bb7455c27884484b9039b52efcf2,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 534669909}
+    - target: {fileID: 114974499860188854, guid: 07e7bb7455c27884484b9039b52efcf2,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: button_money_clicked
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 07e7bb7455c27884484b9039b52efcf2, type: 2}
+  m_IsPrefabAsset: 0
+--- !u!114 &1356506453 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114333487719825014, guid: 07e7bb7455c27884484b9039b52efcf2,
+    type: 2}
+  m_PrefabInternal: {fileID: 1356506452}
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+--- !u!114 &1356506454 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114974499860188854, guid: 07e7bb7455c27884484b9039b52efcf2,
+    type: 2}
+  m_PrefabInternal: {fileID: 1356506452}
+  m_Script: {fileID: 1392445389, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!1 &1361552371
 GameObject:
   m_ObjectHideFlags: 0
@@ -7454,9 +7719,9 @@ GameObject:
   - component: {fileID: 1460025828}
   - component: {fileID: 1460025827}
   - component: {fileID: 1460025826}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: camino (21)
-  m_TagString: Untagged
+  m_TagString: enemyPath
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -7624,9 +7889,9 @@ GameObject:
   - component: {fileID: 1490782129}
   - component: {fileID: 1490782128}
   - component: {fileID: 1490782127}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: camino (3)
-  m_TagString: Untagged
+  m_TagString: enemyPath
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -8604,6 +8869,14 @@ Prefab:
       propertyPath: m_StaticEditorFlags
       value: 4294967295
       objectReference: {fileID: 0}
+    - target: {fileID: 1402064116592354, guid: 822db3905db5a0e41a0c97c304e4f981, type: 2}
+      propertyPath: m_TagString
+      value: enemyPath
+      objectReference: {fileID: 0}
+    - target: {fileID: 1402064116592354, guid: 822db3905db5a0e41a0c97c304e4f981, type: 2}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 822db3905db5a0e41a0c97c304e4f981, type: 2}
   m_IsPrefabAsset: 0
@@ -9316,9 +9589,9 @@ GameObject:
   - component: {fileID: 1691414887}
   - component: {fileID: 1691414886}
   - component: {fileID: 1691414885}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: camino (22)
-  m_TagString: Untagged
+  m_TagString: enemyPath
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -10051,9 +10324,9 @@ GameObject:
   - component: {fileID: 1780835033}
   - component: {fileID: 1780835032}
   - component: {fileID: 1780835031}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: camino (25)
-  m_TagString: Untagged
+  m_TagString: enemyPath
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -10306,9 +10579,9 @@ GameObject:
   - component: {fileID: 1799620040}
   - component: {fileID: 1799620039}
   - component: {fileID: 1799620038}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: camino (18)
-  m_TagString: Untagged
+  m_TagString: enemyPath
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -10391,9 +10664,9 @@ GameObject:
   - component: {fileID: 1824728076}
   - component: {fileID: 1824728075}
   - component: {fileID: 1824728074}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: camino (14)
-  m_TagString: Untagged
+  m_TagString: enemyPath
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -10646,9 +10919,9 @@ GameObject:
   - component: {fileID: 1869176877}
   - component: {fileID: 1869176876}
   - component: {fileID: 1869176875}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: camino (1)
-  m_TagString: Untagged
+  m_TagString: enemyPath
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -10932,6 +11205,128 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1886168954}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1001 &1887874964
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1591059925}
+    m_Modifications:
+    - target: {fileID: 224404145567738590, guid: 3ebc227212712374596cdfdb193acd1d,
+        type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224404145567738590, guid: 3ebc227212712374596cdfdb193acd1d,
+        type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224404145567738590, guid: 3ebc227212712374596cdfdb193acd1d,
+        type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224404145567738590, guid: 3ebc227212712374596cdfdb193acd1d,
+        type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224404145567738590, guid: 3ebc227212712374596cdfdb193acd1d,
+        type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224404145567738590, guid: 3ebc227212712374596cdfdb193acd1d,
+        type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224404145567738590, guid: 3ebc227212712374596cdfdb193acd1d,
+        type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224404145567738590, guid: 3ebc227212712374596cdfdb193acd1d,
+        type: 2}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 224404145567738590, guid: 3ebc227212712374596cdfdb193acd1d,
+        type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: 338.31998
+      objectReference: {fileID: 0}
+    - target: {fileID: 224404145567738590, guid: 3ebc227212712374596cdfdb193acd1d,
+        type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: -171.40001
+      objectReference: {fileID: 0}
+    - target: {fileID: 224404145567738590, guid: 3ebc227212712374596cdfdb193acd1d,
+        type: 2}
+      propertyPath: m_SizeDelta.x
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 224404145567738590, guid: 3ebc227212712374596cdfdb193acd1d,
+        type: 2}
+      propertyPath: m_SizeDelta.y
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 224404145567738590, guid: 3ebc227212712374596cdfdb193acd1d,
+        type: 2}
+      propertyPath: m_AnchorMin.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 224404145567738590, guid: 3ebc227212712374596cdfdb193acd1d,
+        type: 2}
+      propertyPath: m_AnchorMin.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 224404145567738590, guid: 3ebc227212712374596cdfdb193acd1d,
+        type: 2}
+      propertyPath: m_AnchorMax.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 224404145567738590, guid: 3ebc227212712374596cdfdb193acd1d,
+        type: 2}
+      propertyPath: m_AnchorMax.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 224404145567738590, guid: 3ebc227212712374596cdfdb193acd1d,
+        type: 2}
+      propertyPath: m_Pivot.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 224404145567738590, guid: 3ebc227212712374596cdfdb193acd1d,
+        type: 2}
+      propertyPath: m_Pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114472706501632218, guid: 3ebc227212712374596cdfdb193acd1d,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 534669909}
+    - target: {fileID: 114472706501632218, guid: 3ebc227212712374596cdfdb193acd1d,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: button_speed_clicked
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 3ebc227212712374596cdfdb193acd1d, type: 2}
+  m_IsPrefabAsset: 0
+--- !u!114 &1887874965 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114706701706944894, guid: 3ebc227212712374596cdfdb193acd1d,
+    type: 2}
+  m_PrefabInternal: {fileID: 1887874964}
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+--- !u!114 &1887874966 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114472706501632218, guid: 3ebc227212712374596cdfdb193acd1d,
+    type: 2}
+  m_PrefabInternal: {fileID: 1887874964}
+  m_Script: {fileID: 1392445389, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!1 &1888114023
 GameObject:
   m_ObjectHideFlags: 0
@@ -10943,9 +11338,9 @@ GameObject:
   - component: {fileID: 1888114027}
   - component: {fileID: 1888114026}
   - component: {fileID: 1888114025}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: camino (23)
-  m_TagString: Untagged
+  m_TagString: enemyPath
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -12293,9 +12688,9 @@ GameObject:
   - component: {fileID: 2081371210}
   - component: {fileID: 2081371209}
   - component: {fileID: 2081371208}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: camino (12)
-  m_TagString: Untagged
+  m_TagString: enemyPath
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -12463,9 +12858,9 @@ GameObject:
   - component: {fileID: 2103986585}
   - component: {fileID: 2103986584}
   - component: {fileID: 2103986583}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: camino (6)
-  m_TagString: Untagged
+  m_TagString: enemyPath
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295

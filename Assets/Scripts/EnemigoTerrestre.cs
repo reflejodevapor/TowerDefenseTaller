@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
+namespace turretGame { 
 [RequireComponent(typeof(NavMeshAgent))]
 public class EnemigoTerrestre : Enemigo {
 
@@ -33,4 +34,5 @@ public class EnemigoTerrestre : Enemigo {
             v_velocidad = velocidad;
         }
     }
+}
 }

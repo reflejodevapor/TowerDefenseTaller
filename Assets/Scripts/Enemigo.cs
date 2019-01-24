@@ -9,49 +9,53 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-
-public class Enemigo : MonoBehaviour {
+namespace turretGame{
+    public class Enemigo : MonoBehaviour {
 
     
-    [Header("Atributos del enemigo base")]
-    [SerializeField] protected GameObject meta; // la posicion a donde se va a mover y también para reducir el daño al golpear
-    [SerializeField] protected float velocidad; //Velocidad a la que se mueve
+        [Header("Atributos del enemigo base")]
+        [SerializeField] protected GameObject meta; // la posicion a donde se va a mover y también para reducir el daño al golpear
+        [SerializeField] protected float velocidad; //Velocidad a la que se mueve
     
-    [SerializeField] protected float vida; //la cantidad de vida que puede recibir
-    [SerializeField] protected float danio; // Daño que causa con cada ataque
-    [SerializeField] protected int dinero; // El dinero que suelta al morir
-    [Tooltip("Distancia necesaria para contar que llegó a la meta")]
-    [SerializeField] protected float WinOffset; // Distancia necesaria para contar que llegó a la meta
+        [SerializeField] protected float vida; //la cantidad de vida que puede recibir
+        [SerializeField] protected float danio; // Daño que causa con cada ataque
+        [SerializeField] protected int dinero; // El dinero que suelta al morir
+        [Tooltip("Distancia necesaria para contar que llegó a la meta")]
+        [SerializeField] protected float WinOffset; // Distancia necesaria para contar que llegó a la meta
 
-    void Update()
-    {
-        OnUpdate();
-    }
+        public bool hit = false;
 
-    protected virtual void OnUpdate() //Esta base existe para poder ser sobrecargada en los objetos que de aqui hereden
-    {
-        //Para verificar cuando llegó a la meta
-        if (Vector3.Distance(transform.position, meta.transform.position) < WinOffset)
+
+        void Update()
         {
-            UIManager.RecibeDanio(danio);
-            gameObject.SetActive(false);
+            OnUpdate();
         }
-    }
 
-    /// <summary>
-    /// Se llama este metodo cuando se recibe daño. se recibe el daño como argumento dado que cada torreta hace daño disinto
-    /// </summary>
-    /// <param name="damage"></param>
-    public void Damage(float damage)
-    {
-        vida -= damage;
-        if (vida <= 0)
+        protected virtual void OnUpdate() //Esta base existe para poder ser sobrecargada en los objetos que de aqui hereden
         {
-            vida = 0;
-            //TO DO : handle enemy death properly
-            UIManager.dinero += dinero;
-            this.gameObject.SetActive(false);
+            //Para verificar cuando llegó a la meta
+            if (Vector3.Distance(transform.position, meta.transform.position) < WinOffset)
+            {
+                UIManager.RecibeDanio(danio);
+                gameObject.SetActive(false);
+            }
+        }
+
+        /// <summary>
+        /// Se llama este metodo cuando se recibe daño. se recibe el daño como argumento dado que cada torreta hace daño disinto
+        /// </summary>
+        /// <param name="damage"></param>
+        public void Damage(float damage)
+        {
+            vida -= damage;
+            if (vida <= 0)
+            {
+                vida = 0;
+                //TO DO : handle enemy death properly
+                UIManager.dinero += dinero;
+                this.gameObject.SetActive(false);
             
+            }
         }
     }
 }
