@@ -1,4 +1,3 @@
-
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -62,8 +61,6 @@ public class Hordas : MonoBehaviour
             // Vaciamos la lista
             Enemy.Clear();
 
-            //GenerarEnemigos();
-
             StartCoroutine("GenerarEnemigos");
         }
     }
@@ -74,7 +71,6 @@ public class Hordas : MonoBehaviour
 
         for(int i = 0; i < NumeroEnemigos; i++)
         {
-            //Enemy.Add(Enemigo);
 
             // Agarra uno de los prefabs al azar
             int PosPrefab = Random.Range(0, Prefabs_Enemigos.Length);

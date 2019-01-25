@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 33117407336999110}
   - component: {fileID: 23073667629459674}
   - component: {fileID: 136594838625997696}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: cuerpoTorreta
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -43,7 +43,7 @@ GameObject:
   - component: {fileID: 114947724202433726}
   - component: {fileID: 54137675153630014}
   - component: {fileID: 114043302402403080}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: cabezaTorreta
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -58,7 +58,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4359491895747476}
-  m_Layer: 0
+  - component: {fileID: 114992545054740808}
+  m_Layer: 9
   m_Name: Torreta
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -238,7 +239,41 @@ MonoBehaviour:
   turretHead: {fileID: 1520210610806200}
   turretHealth: 24
   turretRateOfFire: 0.25
+  turretDamage: 1
   maxLevel: 3
+  Level: 1
+  FireRates:
+  - 1
+  - 0.5
+  - 0.25
+  damages:
+  - 1
+  - 2
+  - 3
+  Seleccionado: 0
+--- !u!114 &114992545054740808
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1852482210518962}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b955ff55d5ed5c4baaa93a5f082d7d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LockOn: 0
+  enemyObjective: {fileID: 0}
+  projectile: {fileID: 0}
+  turretHead: {fileID: 0}
+  turretHealth: 0
+  turretRateOfFire: 0
+  turretDamage: 0
+  maxLevel: 0
+  Level: 1
+  FireRates: []
+  damages: []
+  Seleccionado: 0
 --- !u!136 &136391349310780146
 CapsuleCollider:
   m_ObjectHideFlags: 1
@@ -260,7 +295,7 @@ CapsuleCollider:
   m_GameObject: {fileID: 1076921769182560}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   m_Radius: 0.5000001
   m_Height: 2
   m_Direction: 1

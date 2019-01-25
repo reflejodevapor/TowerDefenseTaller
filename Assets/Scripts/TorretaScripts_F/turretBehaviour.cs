@@ -20,10 +20,11 @@ namespace turretGame{
 		public List<float> FireRates = new List<float>();
 		public List<float> damages = new List<float> ();
 
+        public bool Seleccionado = false;
+
 		// Use this for initialization
-		void Start () 
-		{
-			
+		void Start ()
+        {
 			turretRateOfFire = FireRates [0];
 			turretDamage = damages [0];
 		}
@@ -31,11 +32,31 @@ namespace turretGame{
 		// Update is called once per frame
 		void Update () 
 		{
-            Debug.Log(LockOn);
+            //Debug.Log(LockOn);
 
-			if(Input.GetKeyDown(KeyCode.Alpha1)){LevelUpTurret ();}
+            /*if(Input.GetMouseButtonDown(0))
+            {
+                RaycastHit hit;
 
-			if (Input.GetKeyDown (KeyCode.Alpha2)) {LevelDownTurret ();}			
+                Ray rayo = cam.ScreenPointToRay(Input.mousePosition);
+
+                if(Physics.Raycast(rayo, out hit, Mathf.Infinity, mascara))
+                {
+                    Seleccionado = true;
+                    MejorarTorreta.Torreta = this;
+                }
+                else
+                {
+                    Seleccionado = false;
+                }
+            }*/
+
+            if (Seleccionado == true)
+            {
+                if (Input.GetKeyDown(KeyCode.Alpha1)){LevelUpTurret ();}
+
+			    if (Input.GetKeyDown (KeyCode.Alpha2)) {LevelDownTurret ();}
+            }
 
 		}
 
@@ -64,7 +85,7 @@ namespace turretGame{
 
 
 		///es solo un test para saber si cambia de fire rate la torreta. 
-        void LevelUpTurret()
+        public void LevelUpTurret()
 		{
 			
 				if (Level < maxLevel) 
@@ -79,7 +100,7 @@ namespace turretGame{
 
 		}
 
-		void LevelDownTurret()
+		public void LevelDownTurret()
 		{
 				if (Level > 1) 
 					{                                  
