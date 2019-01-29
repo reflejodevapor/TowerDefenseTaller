@@ -20,7 +20,7 @@ namespace turretGame{
 		public List<float> FireRates = new List<float>();
 		public List<float> damages = new List<float> ();
 
-        public bool Seleccionado = false;
+       public bool Seleccionado = false;
 
 		// Use this for initialization
 		void Start ()
@@ -51,7 +51,7 @@ namespace turretGame{
                 }
             }*/
 
-            if (Seleccionado == true)
+           if (Seleccionado == true)
             {
                 if (Input.GetKeyDown(KeyCode.Alpha1)){LevelUpTurret ();}
 
@@ -95,8 +95,10 @@ namespace turretGame{
 
 				turretRateOfFire = FireRates [Level - 1];
 				turretDamage = damages [Level - 1];
+				
 				Debug.Log ("Aqui subio de nivel");
-				print (turretRateOfFire);
+				print (" Aqui es el valor de firerate" + turretRateOfFire);
+				print (" Aqui muestra el daño" + turretDamage);
 
 		}
 

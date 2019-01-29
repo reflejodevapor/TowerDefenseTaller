@@ -10,6 +10,7 @@ namespace turretGame{
 		public float projectileSpeed;
 		private Vector3 enemyPos;
 		public GameObject TorretaPadre;
+		float dano;
 
 		void Start () {
 			

@@ -40,7 +40,7 @@ public class SeleccionarTorreta : MonoBehaviour {
             {
                 if (Torreta != null)
                 {
-                    Invoke("Unselect", 0.5f);
+                    Invoke("Unselect", 0.1f);
                 }
                 else
                 {
