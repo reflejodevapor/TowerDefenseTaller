@@ -1,9 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Hordas : MonoBehaviour
 {
+    public GameObject Panel;
+
     // Posicion del cual apareceran los enemigos
     public Vector3 spawnPoint;
 
@@ -30,6 +34,12 @@ public class Hordas : MonoBehaviour
         TodosMuertos = false;
 
         StartCoroutine("GenerarEnemigos");
+
+        ContadorHorda = 1;
+
+        Panel = GameObject.Find("Panel");
+
+        Panel.SetActive(false);
     }
 
     // Update is called once per frame
@@ -55,13 +65,22 @@ public class Hordas : MonoBehaviour
         // Si todos estan muertos...
         if (TodosMuertos == true)
         {
-            // Aumentamos los enemigos y los volvemos a generar
-            NumeroEnemigos++;
-
             // Vaciamos la lista
             Enemy.Clear();
 
-            StartCoroutine("GenerarEnemigos");
+            if (ContadorHorda < NumeroHordas)
+            {
+                // Aumentamos los enemigos y los volvemos a generar
+                NumeroEnemigos++;
+
+                StartCoroutine("GenerarEnemigos");
+
+                ContadorHorda++;
+            }
+            else
+            {
+                Panel.SetActive(true);
+            }
         }
     }
 
