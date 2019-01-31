@@ -9,6 +9,8 @@ namespace turretGame{
 		private turretBehaviour turretBehaviour;
 		public float projectileSpeed;
 		private Vector3 enemyPos;
+        [SerializeField]
+        private float Damage = 2;
 
 		void Start () {}
 		
@@ -22,7 +24,7 @@ namespace turretGame{
 		{
             if(_col.gameObject.GetComponentInParent<Enemigo>() != null)
             {
-                _col.gameObject.GetComponentInParent<Enemigo>().Damage(1.0f);
+                _col.gameObject.GetComponentInParent<Enemigo>().Damage(Damage);
 
                 this.gameObject.SetActive(false);
             }
