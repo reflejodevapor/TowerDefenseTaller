@@ -54,6 +54,7 @@ namespace turretGame {
                             Debug.Log("yea boi");
                             posicionAInstanciar = hitCast.collider.gameObject.transform.position;
                             StartCoroutine(addAirStrikeScript(hitCast.collider.gameObject));
+                            CoolDowns.airStrikeIndicator = false;
                         }
 
                     }

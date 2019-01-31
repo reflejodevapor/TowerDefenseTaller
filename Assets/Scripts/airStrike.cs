@@ -18,7 +18,7 @@ namespace turretGame
 
         private void OnDestroy()
         {
-            Debug.Log("test");
+            Debug.Log("color original");
             this.gameObject.GetComponent<MeshRenderer>().material.color = colorOriginal;
         }
 
@@ -55,7 +55,7 @@ namespace turretGame
             EnemigoTerrestre et = turret.GetComponent<EnemigoTerrestre>(); //agarra el script
             if (turret.CompareTag("Enemigo")){ ///checa si esta y si tiene el tag enemigo
                 et.Damage(0.5f); // le quita 0.5 de daño de 3 totales cada 0.8s.
-                yield return new WaitForSeconds(0.8f);
+                yield return new WaitForSeconds(0.65f);
                 et.GetComponent<Enemigo>().hit = false;
             }
         }
