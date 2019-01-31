@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -112,7 +112,7 @@ NavMeshSettings:
     accuratePlacement: 0
     debug:
       m_Flags: 0
-  m_NavMeshData: {fileID: 0}
+  m_NavMeshData: {fileID: 23800000, guid: a251ce696e7276b4fa64274ece9a7cb0, type: 2}
 --- !u!1001 &8129763
 Prefab:
   m_ObjectHideFlags: 0
@@ -1286,6 +1286,7 @@ Transform:
   - {fileID: 814807798}
   - {fileID: 377973012}
   - {fileID: 658430311}
+  - {fileID: 939241759}
   - {fileID: 1095870180}
   - {fileID: 246747287}
   - {fileID: 2078891071}
@@ -1299,47 +1300,46 @@ Transform:
   - {fileID: 819598152}
   - {fileID: 580518521}
   - {fileID: 1406056834}
+  - {fileID: 869494425}
   - {fileID: 1787737590}
+  - {fileID: 1065234930}
   - {fileID: 1311477564}
+  - {fileID: 1655312367}
   - {fileID: 1543873541}
   - {fileID: 1098846430}
+  - {fileID: 1228397158}
   - {fileID: 122976954}
   - {fileID: 1511589028}
   - {fileID: 1761522478}
+  - {fileID: 1683257441}
   - {fileID: 1813339930}
   - {fileID: 364451117}
-  - {fileID: 1655312367}
+  - {fileID: 1164719105}
+  - {fileID: 1154020480}
+  - {fileID: 547895764}
+  - {fileID: 835427679}
   - {fileID: 1981697593}
   - {fileID: 855209360}
-  - {fileID: 1228397158}
+  - {fileID: 1704332168}
+  - {fileID: 720053622}
   - {fileID: 1834958843}
+  - {fileID: 637141394}
   - {fileID: 1171271287}
   - {fileID: 619441120}
-  - {fileID: 1164719105}
-  - {fileID: 869494425}
-  - {fileID: 2059625264}
-  - {fileID: 547895764}
-  - {fileID: 1663221096}
-  - {fileID: 1778674597}
-  - {fileID: 877514647}
-  - {fileID: 1224821010}
-  - {fileID: 1800162424}
-  - {fileID: 939241759}
-  - {fileID: 1154020480}
-  - {fileID: 835427679}
-  - {fileID: 1683257441}
-  - {fileID: 720053622}
-  - {fileID: 637141394}
-  - {fileID: 1704332168}
-  - {fileID: 1065234930}
   - {fileID: 1126799078}
+  - {fileID: 1663221096}
   - {fileID: 586959391}
+  - {fileID: 2059625264}
   - {fileID: 264941319}
+  - {fileID: 877514647}
   - {fileID: 432848102}
+  - {fileID: 1778674597}
   - {fileID: 1414966345}
   - {fileID: 895684383}
+  - {fileID: 1224821010}
   - {fileID: 546754779}
   - {fileID: 154705387}
+  - {fileID: 1800162424}
   - {fileID: 68987148}
   m_Father: {fileID: 0}
   m_RootOrder: 2
