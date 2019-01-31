@@ -1,0 +1,173 @@
+fileFormatVersion: 2
+guid: 0f986cce903207b43a1827c03514f18b
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: Brazo_D
+    100002: Brazo_I
+    100004: Cabeza
+    100006: //RootNode
+    100008: Cerdo
+    100010: ctrl_jnt_cabeza
+    100012: ctrl_jnt_knee_D
+    100014: ctrl_jnt_knee_L
+    100016: ctrl_jnt_mano_D
+    100018: ctrl_jnt_mano_I
+    100020: ctrl_main
+    100022: ctrl_root
+    100024: JNT
+    100026: jnt_brazo_D
+    100028: jnt_brazo_I
+    100030: jnt_cabeza
+    100032: jnt_cadera
+    100034: jnt_foot_D
+    100036: jnt_foot_L
+    100038: jnt_knee_D
+    100040: jnt_knee_L
+    100042: jnt_mano_D
+    100044: jnt_mano_I
+    100046: jnt_principal
+    100048: Locators
+    100050: Mano_D
+    100052: Mano_I
+    100054: Principal
+    100056: Principal1
+    100058: Principal2
+    100060: Principal3
+    100062: Principal4
+    100064: Principal5
+    100066: Zctrl_jnt_cabeza
+    100068: Zctrl_jnt_knee_D
+    100070: Zctrl_jnt_knee_L
+    100072: Zctrl_jnt_mano_D
+    100074: Zctrl_jnt_mano_I
+    100076: Zctrl_main
+    100078: Zctrl_root
+    400000: Brazo_D
+    400002: Brazo_I
+    400004: Cabeza
+    400006: //RootNode
+    400008: Cerdo
+    400010: ctrl_jnt_cabeza
+    400012: ctrl_jnt_knee_D
+    400014: ctrl_jnt_knee_L
+    400016: ctrl_jnt_mano_D
+    400018: ctrl_jnt_mano_I
+    400020: ctrl_main
+    400022: ctrl_root
+    400024: JNT
+    400026: jnt_brazo_D
+    400028: jnt_brazo_I
+    400030: jnt_cabeza
+    400032: jnt_cadera
+    400034: jnt_foot_D
+    400036: jnt_foot_L
+    400038: jnt_knee_D
+    400040: jnt_knee_L
+    400042: jnt_mano_D
+    400044: jnt_mano_I
+    400046: jnt_principal
+    400048: Locators
+    400050: Mano_D
+    400052: Mano_I
+    400054: Principal
+    400056: Principal1
+    400058: Principal2
+    400060: Principal3
+    400062: Principal4
+    400064: Principal5
+    400066: Zctrl_jnt_cabeza
+    400068: Zctrl_jnt_knee_D
+    400070: Zctrl_jnt_knee_L
+    400072: Zctrl_jnt_mano_D
+    400074: Zctrl_jnt_mano_I
+    400076: Zctrl_main
+    400078: Zctrl_root
+    2100000: lambert1
+    4300000: Cerdo
+    7400000: Disparar
+    9500000: //RootNode
+    13700000: Cerdo
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 0.01
+    hasPreviousCalculatedGlobalScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
