@@ -1,13 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.UI;
 public class Hordas : MonoBehaviour
 {
     public Vector3 spawnPoint;
 
+    public Text hordasTexto;
     // Booleano del estado de los enemigos
-    bool TodosMuertos;
+    bool TodosMuertos = true;
 
     // Prefab del Enemigo
     public GameObject Enemigo;
@@ -35,6 +36,8 @@ public class Hordas : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+        hordasTexto.text = ContadorHorda.ToString() + " / " + NumeroHordas.ToString() ;
         if (Input.GetKeyDown(KeyCode.Space))
         {
             MatarEnemigo();
@@ -78,6 +81,7 @@ public class Hordas : MonoBehaviour
 
     IEnumerator GenerarEnemigos()
     {
+        print("Iniciando corrutine");
         // Esto esta poco optimizado, vere la manera de hacerlo mejor pero por el momento esto fue lo unico que se me ocurrio 
 
         for(int i = 0; i < NumeroEnemigos; i++)

@@ -63,7 +63,7 @@ public class UIGamePlayerResourcesManager : MonoBehaviour
     }
 
     public GameObject amigo1;
-    public void InstanciarAmigo()
+    public void InstanciarAmigo(int i)
     {
         GameObject amigo = Instantiate(amigo1, posicionAInstanciar, Quaternion.identity);
         amigo.transform.position = posicionAInstanciar;

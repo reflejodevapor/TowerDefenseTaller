@@ -6,13 +6,11 @@ using UnityEngine.SceneManagement;
 
 public class UIManager : MonoBehaviour {
 
-    public GameObject goVidaBase;
+    public Image goVidaBase;
 
-    public static float vidaBase;
-    public static int dinero;
+    public static float vidaBase = 100;
+    public static int dinero = 40;
 
-
-    public Text vidaBaseTxt;
     public Text dineroTxt;
 
     /// <summary>
@@ -22,15 +20,29 @@ public class UIManager : MonoBehaviour {
     public static void RecibeDanio(float d)
     {
         vidaBase -= d;
-
         //Cuando ya valio pito
         if (vidaBase <= 0)
         {
             vidaBase = 0;
+
             //TO DO: Implementar el fin de juego
         }
     }
+    
 
+    void AjustaBarraVida()
+    {
+        goVidaBase.fillAmount = vidaBase * 0.01f;
+    }
+
+    void Update()
+    {
+        AjustaBarraVida();
+        dineroTxt.text = dinero.ToString();
+    }
+
+
+    
 
 
 }
