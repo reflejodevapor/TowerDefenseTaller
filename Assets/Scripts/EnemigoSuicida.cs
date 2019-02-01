@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+namespace turretGame{
 public class EnemigoSuicida : Enemigo {
     public float firingAngle = 45.0f;
     public float gravity = 9.8f;
@@ -59,5 +60,7 @@ public class EnemigoSuicida : Enemigo {
             yield return null;
         }
     }
+
+}
 
 }

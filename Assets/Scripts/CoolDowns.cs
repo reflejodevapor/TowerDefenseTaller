@@ -3,167 +3,174 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class CoolDowns : MonoBehaviour {
+namespace turretGame { 
+    public class CoolDowns : MonoBehaviour {
 
-    private float coolDownTimer_AS;
-    public float airStrikeCoolDown;
+        private float coolDownTimer_AS;
+        public float airStrikeCoolDown;
 
-    private float coolDownTimer_IMM;
-    public float instantMoneyMultiplierCoolDown;
+        private float coolDownTimer_IMM;
+        public float instantMoneyMultiplierCoolDown;
 
-    private float coolDownTimer_DSS;
-    public float doubleShootingSpeedCoolDown;
+        private float coolDownTimer_DSS;
+        public float doubleShootingSpeedCoolDown;
 
-    public Button buttonAirStrike;
-    public Button buttonMoneyMultiplier;
-    public Button buttonDoubleShootingSpeed;
+        public static bool airStrikeIndicator = false;
 
-    public Text airStrikeText;
-    public Text moneyText;
-    public Text speedText;
+        public Button buttonAirStrike;
+        public Button buttonMoneyMultiplier;
+        public Button buttonDoubleShootingSpeed;
 
-    private string cdIndicator;
+        public Text airStrikeText;
+        public Text moneyText;
+        public Text speedText;
 
-        void Start()
-        {
-            coolDownTimer_AS = airStrikeCoolDown;
-            coolDownTimer_DSS = doubleShootingSpeedCoolDown;
-            coolDownTimer_IMM = instantMoneyMultiplierCoolDown;
-            moneyText.enabled = false;
-            speedText.enabled = false;
-            airStrikeText.enabled = false;
-            turretBehaviour.turretRateOfFire = 0.8f;
-        }
+        private string cdIndicator;
 
-        // Update is called once per frame
-        void Update() {
-
-        if (buttonAirStrike.CompareTag("used"))
-        {
-
-            if (coolDownTimer_AS > 0)
+            void Start()
             {
-                coolDownTimer_AS -= Time.deltaTime;
+                coolDownTimer_AS = airStrikeCoolDown;
+                coolDownTimer_DSS = doubleShootingSpeedCoolDown;
+                coolDownTimer_IMM = instantMoneyMultiplierCoolDown;
+                moneyText.enabled = false;
+                speedText.enabled = false;
+                airStrikeText.enabled = false;
+                turretBehaviour.turretRateOfFire = 0.8f;
             }
-        }
 
-        if (buttonMoneyMultiplier.CompareTag("used"))
-        {
-            Debug.Log("entro a used de 2");
-            if (coolDownTimer_IMM > 0)
+            // Update is called once per frame
+            void Update() {
+
+            if (buttonAirStrike.CompareTag("used"))
             {
-                coolDownTimer_IMM -= Time.deltaTime;
+
+                if (coolDownTimer_AS > 0)
+                {
+                    coolDownTimer_AS -= Time.deltaTime;
+                }
             }
-        }
+
+            if (buttonMoneyMultiplier.CompareTag("used"))
+            {
+                Debug.Log("entro a used de 2");
+                if (coolDownTimer_IMM > 0)
+                {
+                    coolDownTimer_IMM -= Time.deltaTime;
+                }
+            }
         
-        if (buttonDoubleShootingSpeed.CompareTag("used"))
-        {
-            Debug.Log("entro a used de 3");
-            if (coolDownTimer_DSS > 0)
+            if (buttonDoubleShootingSpeed.CompareTag("used"))
             {
-                coolDownTimer_DSS -= Time.deltaTime;
+                Debug.Log("entro a used de 3");
+                if (coolDownTimer_DSS > 0)
+                {
+                    coolDownTimer_DSS -= Time.deltaTime;
+                }
             }
-        }
         
 
-        ////////////////////////////////////////////
+            ////////////////////////////////////////////
 
 
-        if (coolDownTimer_AS <= 0)
-        {
-            buttonAirStrike.tag = "unused";
-            coolDownTimer_AS = airStrikeCoolDown;
-        }
+            if (coolDownTimer_AS <= 0)
+            {
+                buttonAirStrike.tag = "unused";
+                coolDownTimer_AS = airStrikeCoolDown;
+            }
 
-        if (coolDownTimer_IMM <= 0)
-        {
-            buttonMoneyMultiplier.tag = "unused";
-            coolDownTimer_IMM = instantMoneyMultiplierCoolDown;
-        }
+            if (coolDownTimer_IMM <= 0)
+            {
+                buttonMoneyMultiplier.tag = "unused";
+                coolDownTimer_IMM = instantMoneyMultiplierCoolDown;
+            }
 
-        if (coolDownTimer_DSS <= 0)
-        {
-            buttonDoubleShootingSpeed.tag = "unused";
-            coolDownTimer_DSS = doubleShootingSpeedCoolDown;
-        }
+            if (coolDownTimer_DSS <= 0)
+            {
+                buttonDoubleShootingSpeed.tag = "unused";
+                coolDownTimer_DSS = doubleShootingSpeedCoolDown;
+            }
 
-        /////////////////////////////////////////////
+            /////////////////////////////////////////////
 
-        if (buttonAirStrike.CompareTag("used"))
-        {
-            airStrikeText.enabled = true;
-            buttonAirStrike.interactable = false;
+            if (buttonAirStrike.CompareTag("used"))
+            {
+                airStrikeText.enabled = true;
+                buttonAirStrike.interactable = false;
 
-        }
-        else
-        {
+            }
+            else
+            {
 
-            airStrikeText.enabled = false;
-            buttonAirStrike.interactable = true;
+                airStrikeText.enabled = false;
+                buttonAirStrike.interactable = true;
 
-        }
+            }
 
-        if (buttonDoubleShootingSpeed.CompareTag("used"))
-        {
-            speedText.enabled = true;
-            buttonDoubleShootingSpeed.interactable = false;
+            if (buttonDoubleShootingSpeed.CompareTag("used"))
+            {
+                speedText.enabled = true;
+                buttonDoubleShootingSpeed.interactable = false;
 
-        }
-        else
-        {
-            speedText.enabled = false;
-            buttonDoubleShootingSpeed.interactable = true;
+            }
+            else
+            {
+                speedText.enabled = false;
+                buttonDoubleShootingSpeed.interactable = true;
             
+            }
+
+            if (buttonMoneyMultiplier.CompareTag("used"))
+            {
+                moneyText.enabled = true;
+                buttonMoneyMultiplier.interactable = false;
+            }
+            else
+            {
+                moneyText.enabled = false;
+                buttonMoneyMultiplier.interactable = true;
+            }
+
+            ////////////////////////////////////////////
+
+            moneyText.text = Mathf.Round(coolDownTimer_IMM).ToString();
+            speedText.text = Mathf.Round(coolDownTimer_DSS).ToString();
+            airStrikeText.text = Mathf.Round(coolDownTimer_AS).ToString();
+
+            cdIndicator = "CD Air Strike: " + coolDownTimer_AS.ToString() + "- CD Money Multiplier: " + coolDownTimer_IMM.ToString() + " - CD Double Speed: " + coolDownTimer_DSS.ToString();
+
+
+
+            //Debug.Log(cdIndicator);
+
+
         }
 
-        if (buttonMoneyMultiplier.CompareTag("used"))
+        public void button_airstrike_clicked()
         {
-            moneyText.enabled = true;
-            buttonMoneyMultiplier.interactable = false;
+            airStrikeIndicator = true;
+            buttonAirStrike.tag = "used";
+            Debug.Log(airStrikeIndicator.ToString());
+
         }
-        else
+
+        public void button_money_clicked()
         {
-            moneyText.enabled = false;
-            buttonMoneyMultiplier.interactable = true;
+            buttonMoneyMultiplier.tag = "used";
+
+            UIManager.dinero *= (int)1.3f;
         }
 
-        ////////////////////////////////////////////
+        public void button_speed_clicked()
+        {
+            buttonDoubleShootingSpeed.tag = "used";
+            StartCoroutine("speedforturrets");
+        }
 
-        moneyText.text = Mathf.Round(coolDownTimer_IMM).ToString();
-        speedText.text = Mathf.Round(coolDownTimer_DSS).ToString();
-        airStrikeText.text = Mathf.Round(coolDownTimer_AS).ToString();
-
-        cdIndicator = "CD Air Strike: " + coolDownTimer_AS.ToString() + "- CD Money Multiplier: " + coolDownTimer_IMM.ToString() + " - CD Double Speed: " + coolDownTimer_DSS.ToString();
-
-
-
-        //Debug.Log(cdIndicator);
-
-
-    }
-
-    public void button_airstrike_clicked()
-    {
-        buttonAirStrike.tag = "used";
-    }
-
-    public void button_money_clicked()
-    {
-        buttonMoneyMultiplier.tag = "used";
-
-        UIManager.dinero *= (int)1.3f;
-    }
-
-    public void button_speed_clicked()
-    {
-        buttonDoubleShootingSpeed.tag = "used";
-        StartCoroutine("speedforturrets");
-    }
-
-    private IEnumerator speedforturrets()
-    {
-        turretBehaviour.turretRateOfFire /= 1.2f;
-        yield return new WaitForSeconds(2.5f);
-        turretBehaviour.turretRateOfFire *= 1.2f;
+        private IEnumerator speedforturrets()
+        {
+            turretBehaviour.turretRateOfFire /= 1.2f;
+            yield return new WaitForSeconds(2.5f);
+            turretBehaviour.turretRateOfFire *= 1.2f;
+        }
     }
 }
