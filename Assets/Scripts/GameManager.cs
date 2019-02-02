@@ -7,5 +7,6 @@ public class GameManager : MonoBehaviour {
 
     public static bool sonido = true;
     public static bool efectos = true;
+    public static bool estaPausado = false;
 
 }

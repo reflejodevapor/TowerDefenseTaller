@@ -42,7 +42,37 @@ public class UIManager : MonoBehaviour {
     }
 
 
+    public GameObject panelPausa;
+    public GameObject imagenBloqueadoraPaneles;
+    public void EstadoPanelPausa(bool estado)
+    {
+        if (GameManager.estaPausado)
+        {
+            Time.timeScale = 1;
+            GameManager.estaPausado = false;
+        }
+        else
+        {
+            GameManager.estaPausado = true;
+            Time.timeScale = 0;
+        }
+            panelPausa.SetActive(estado);
+            imagenBloqueadoraPaneles.SetActive(estado);
     
 
 
+ 
+
+
+    }
+
+    public void SetMusica(bool _estado)
+    {
+        GameManager.sonido = _estado;
+    }
+
+    public void SetEfectos(bool _estado)
+    {
+        GameManager.efectos = _estado;
+    }
 }

@@ -12,7 +12,7 @@ namespace turretGame {
         public LayerMask capaSlots;
         public GameObject slotToUse;
         public Vector3 posicionAInstanciar;
-
+        public GameObject dineroInsuficienteText;
         // Use this for initialization
         void Start ()
         {
@@ -72,11 +72,56 @@ namespace turretGame {
         }
 
         public GameObject amigo1;
+        public GameObject amigo2;
+        public GameObject amigo3;
+
         public void InstanciarAmigo(int _i)
         {
-            GameObject amigo = Instantiate(amigo1, posicionAInstanciar, Quaternion.identity);
-            amigo.transform.position = posicionAInstanciar;
-            slotToUse.GetComponent<SlotStatus>().used = true;
+            if(_i == 1)
+            {
+                if(UIManager.dinero >= 20)
+                {
+                    GameObject amigo = Instantiate(amigo1, posicionAInstanciar, Quaternion.identity);
+                    amigo.transform.position = posicionAInstanciar;
+                    slotToUse.GetComponent<SlotStatus>().used = true;
+                    UIManager.dinero -= 20;
+                }
+                else
+                {
+                    dineroInsuficienteText.SetActive(true);
+                }
+
+            }
+            if(_i == 2)
+            {
+                if (UIManager.dinero >= 15)
+                {
+                    GameObject amigo = Instantiate(amigo2, posicionAInstanciar, Quaternion.identity);
+                    amigo.transform.position = posicionAInstanciar;
+                    slotToUse.GetComponent<SlotStatus>().used = true;
+                    UIManager.dinero -= 15;
+
+                }
+                else
+                {
+                    dineroInsuficienteText.SetActive(true);
+                }
+            }
+            if (_i == 3)
+            {
+                if (UIManager.dinero >= 10)
+                {
+                    GameObject amigo = Instantiate(amigo3, posicionAInstanciar, Quaternion.identity);
+                    amigo.transform.position = posicionAInstanciar;
+                    slotToUse.GetComponent<SlotStatus>().used = true;
+                    UIManager.dinero -= 10;
+
+                }
+                else
+                {
+                    dineroInsuficienteText.SetActive(true);
+                }
+            }
         }
 
         private IEnumerator addAirStrikeScript(GameObject cuadro)
@@ -91,5 +136,7 @@ namespace turretGame {
                 Destroy(cuadro.GetComponent<airStrike>());
             }
         }
+
+      
     }
 }
