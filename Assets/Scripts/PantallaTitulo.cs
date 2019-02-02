@@ -33,5 +33,15 @@ public class PantallaTitulo : MonoBehaviour {
 
     }
 
+    public void AjustaSonido(bool _sonido)
+    {
+        GameManager.sonido = _sonido;
+    }
+
+    public void AjustaEfectos(bool _efectos)
+    {
+        GameManager.efectos = _efectos;
+    }
+
 
 }

@@ -45,15 +45,19 @@ public class Hordas : MonoBehaviour
 
         // Suponemos que todos los enemigos ya murieron
         TodosMuertos = true;
-        for (int i = 0; i < Enemy.Count; i++)
+        if(Enemy.Count != 0)
         {
-            // Checamos que asi sea
-            if (Enemy[i].activeSelf == true)
+            for (int i = 0; i < Enemy.Count; i++)
             {
-                // En caso de que no esten todos muertos regresamos la variable a falso
-                TodosMuertos = false;
+                // Checamos que asi sea
+                if (Enemy[i].activeSelf == true)
+                {
+                    // En caso de que no esten todos muertos regresamos la variable a falso
+                    TodosMuertos = false;
+                }
             }
         }
+
 
         // Si todos estan muertos...
         if (TodosMuertos == true)
