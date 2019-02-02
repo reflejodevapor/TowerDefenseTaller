@@ -26,6 +26,12 @@ namespace turretGame{
         public bool hit = false;
 
 
+	void Start () {
+        nav = GetComponent<NavMeshAgent>();
+        nav.speed = velocidad; //Setteamos la velocidad a la que se mueve
+        v_velocidad = velocidad;
+        DevelopTorretasGameplay
+
         void Update()
         {
             OnUpdate();

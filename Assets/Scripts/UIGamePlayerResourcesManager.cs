@@ -90,6 +90,7 @@ namespace turretGame {
                 {
                     dineroInsuficienteText.SetActive(true);
                 }
+                //print("<color=green> Se lanzó un raycast y colisionó con  :::: </color>" + hitCast.collider);
 
             }
             if(_i == 2)

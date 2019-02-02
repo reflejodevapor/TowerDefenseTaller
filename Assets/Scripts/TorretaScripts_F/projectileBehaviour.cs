@@ -11,8 +11,12 @@ namespace turretGame{
 		private Vector3 enemyPos;
         [SerializeField]
         private float Damage = 2;
+		public GameObject TorretaPadre;
+		float dano;
 
-		void Start () {}
+		void Start () {
+			
+		}
 		
 		// Update is called once per frame
 		void Update () {
@@ -24,7 +28,11 @@ namespace turretGame{
 		{
             if(_col.gameObject.GetComponentInParent<Enemigo>() != null)
             {
+
                 _col.gameObject.GetComponentInParent<Enemigo>().Damage(Damage);
+
+				//_col.gameObject.GetComponent<Enemigo>().Damage(1.0f);
+				_col.gameObject.GetComponent<Enemigo>().Damage(TorretaPadre.GetComponent<turretBehaviour>().damages[TorretaPadre.GetComponent<turretBehaviour>().Level - 1]);
 
                 this.gameObject.SetActive(false);
             }
