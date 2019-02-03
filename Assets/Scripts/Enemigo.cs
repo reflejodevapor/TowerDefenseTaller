@@ -7,16 +7,17 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.AI;
 
 namespace turretGame{
     public class Enemigo : MonoBehaviour {
 
     
         [Header("Atributos del enemigo base")]
+        protected NavMeshAgent nav; // necesita el navmesh para hacer el pathfinding en automático
         [SerializeField] protected GameObject meta; // la posicion a donde se va a mover y también para reducir el daño al golpear
         [SerializeField] protected float velocidad; //Velocidad a la que se mueve
-    
+        private float v_velocidad; // esto se usa solo para calcular los deltas de velocidad
         [SerializeField] protected float vida; //la cantidad de vida que puede recibir
         [SerializeField] protected float danio; // Daño que causa con cada ataque
         [SerializeField] protected int dinero; // El dinero que suelta al morir
@@ -26,11 +27,12 @@ namespace turretGame{
         public bool hit = false;
 
 
-	void Start () {
-        nav = GetComponent<NavMeshAgent>();
-        nav.speed = velocidad; //Setteamos la velocidad a la que se mueve
-        v_velocidad = velocidad;
-        DevelopTorretasGameplay
+        void Start()
+        {
+            nav = GetComponent<NavMeshAgent>();
+            nav.speed = velocidad; //Setteamos la velocidad a la que se mueve
+            v_velocidad = velocidad;
+        }
 
         void Update()
         {
