@@ -8,7 +8,7 @@ public class Hordas : MonoBehaviour
     public GameObject Panel;
 
     // Posicion del cual apareceran los enemigos
-    public Vector3 spawnPoint;
+    //public Vector3 spawnPoint;
 
     public Text hordasTexto;
     // Booleano del estado de los enemigos
@@ -105,7 +105,7 @@ public class Hordas : MonoBehaviour
             Enemy.Add(Prefabs_Enemigos[PosPrefab]);
 
             // Los genera
-            Enemy[i] = Instantiate(Prefabs_Enemigos[PosPrefab], spawnPoint, Quaternion.identity);
+            Enemy[i] = Instantiate(Prefabs_Enemigos[PosPrefab], transform.position, Quaternion.identity);
 
             yield return new WaitForSeconds(2.0f);
         }
