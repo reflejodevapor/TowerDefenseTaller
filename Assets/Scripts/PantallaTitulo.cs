@@ -4,6 +4,14 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 public class PantallaTitulo : MonoBehaviour {
 
+
+    void Start()
+    {
+        GameManager.estaPausado = false;
+        UIManager.vidaBase = 100;
+        UIManager.dinero = 40;
+
+    }
     public void MoveScene(string nombre)
     {
         SceneManager.LoadScene(nombre);

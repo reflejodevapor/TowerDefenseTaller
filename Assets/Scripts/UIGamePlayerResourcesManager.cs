@@ -13,16 +13,33 @@ namespace turretGame {
         public GameObject slotToUse;
         public Vector3 posicionAInstanciar;
         public GameObject dineroInsuficienteText;
+        Hordas hordas;
+        public GameObject panelNivelSuperado;
+        public GameObject panelGameOver;
+
         // Use this for initialization
         void Start ()
         {
             evento = GameObject.Find("EventSystem").GetComponent<UnityEngine.EventSystems.EventSystem>(); //Busca eventsystem por referencia
-
+            hordas = Camera.main.GetComponent<Hordas>();
         }
 
         // Update is called once per frame
         void Update ()
         {
+
+            if(hordas.numeroHordas == hordas.contadorHorda && panelNivelSuperado.activeInHierarchy == false)
+            {
+                panelNivelSuperado.SetActive(true);
+                GameObject.FindObjectOfType<UIManager>().imagenBloqueadoraPaneles.SetActive(true);
+            }
+
+            if(UIManager.vidaBase <= 0 && panelGameOver.activeInHierarchy == false)
+            {
+                panelGameOver.SetActive(true);
+                GameObject.FindObjectOfType<UIManager>().imagenBloqueadoraPaneles.SetActive(true);
+
+            }
 
             if ((Input.GetMouseButtonDown(0)))//Checo si no se sobrepone un boton de UI con algo de mundo
             {

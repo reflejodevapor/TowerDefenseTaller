@@ -29,10 +29,12 @@ namespace turretGame
 
         private void OnCollisionStay(Collision collision)
         {
+
+            print("Stay Damage turret a" + collision.gameObject.name);
             Enemigo et = collision.gameObject.GetComponent<EnemigoTerrestre>(); //agarra el script
             if (collision.gameObject.CompareTag("Enemigo") && et != null)
             {
-                collision.gameObject.GetComponent<NavMeshAgent>().speed = 1.35f;
+                collision.gameObject.GetComponent<NavMeshAgent>().speed = 0.7f;
                 if(et.hit == false) { 
                 StartCoroutine(damageTurrets(collision.gameObject));
                     et.hit = true;
@@ -52,6 +54,8 @@ namespace turretGame
 
         private IEnumerator damageTurrets(GameObject turret)
         {
+
+            print("Damage turret a" + gameObject.name);
             EnemigoTerrestre et = turret.GetComponent<EnemigoTerrestre>(); //agarra el script
             if (turret.CompareTag("Enemigo")){ ///checa si esta y si tiene el tag enemigo
                 et.Damage(0.5f); // le quita 0.5 de daño de 3 totales cada 0.8s.

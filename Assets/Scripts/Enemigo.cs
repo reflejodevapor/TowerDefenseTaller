@@ -37,7 +37,7 @@ namespace turretGame{
             if (Vector3.Distance(transform.position, meta.transform.position) < WinOffset)
             {
                 UIManager.RecibeDanio(danio);
-                gameObject.SetActive(false);
+                Destroy(gameObject);
             }
         }
 
@@ -53,8 +53,8 @@ namespace turretGame{
                 vida = 0;
                 //TO DO : handle enemy death properly
                 UIManager.dinero += dinero;
-                this.gameObject.SetActive(false);
-            
+                //   this.gameObject.SetActive(false);
+                Destroy(gameObject);
             }
         }
     }

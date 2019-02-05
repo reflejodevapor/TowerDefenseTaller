@@ -541,9 +541,10 @@ GameObject:
   - component: {fileID: 4958122198653130}
   - component: {fileID: 195449836818307094}
   - component: {fileID: 114253411906283640}
+  - component: {fileID: 65653887757839726}
   m_Layer: 0
   m_Name: Enemigo_terrestre
-  m_TagString: Untagged
+  m_TagString: Enemigo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1219,7 +1220,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1866139142799292}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.28, y: 0, z: -7.14}
+  m_LocalPosition: {x: -16.276, y: 0.074999996, z: 0.35732657}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4046234682272292}
@@ -1328,7 +1329,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 0
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -1354,11 +1355,11 @@ BoxCollider:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1473480201191692}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 2.3157303, z: 1}
-  m_Center: {x: 0, y: 1.436052, z: 0}
+  m_Size: {x: 1, y: 2.488103, z: 1}
+  m_Center: {x: 0, y: 1.3498652, z: 0}
 --- !u!65 &65472549889598920
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -1371,6 +1372,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 4.26993, y: 4.9549026, z: 7.276916}
   m_Center: {x: 0, y: -0.50864327, z: 3.7586281}
+--- !u!65 &65653887757839726
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1866139142799292}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1.3091618, z: 1}
+  m_Center: {x: 0, y: 0.5545892, z: 0}
 --- !u!95 &95262027482497490
 Animator:
   serializedVersion: 3
@@ -1419,7 +1432,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   meta: {fileID: 0}
-  velocidad: 2.5
+  velocidad: 1.5
   vida: 10
   danio: 10
   dinero: 5

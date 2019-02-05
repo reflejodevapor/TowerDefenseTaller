@@ -50,15 +50,25 @@ using UnityEngine;
 
 		}
 
-		void Shoot(){
-			Vector3 bulletPos = new Vector3(turretHead.transform.position.x,turretHead.transform.position.y + 3.0f,turretHead.transform.position.z);
-			turretHead.transform.LookAt(enemyObjective.transform.position);
+	void Shoot()
+    {
 
-			GameObject bala = Instantiate(projectile, turretHead.transform.position,Quaternion.identity);
-			bala.transform.LookAt(enemyObjective.transform.position,Vector3.up);
+        if (enemyObjective != null)
+        {
+            Vector3 bulletPos = new Vector3(turretHead.transform.position.x, turretHead.transform.position.y + 3.0f, turretHead.transform.position.z);
+            turretHead.transform.LookAt(enemyObjective.transform.position);
+
+            GameObject bala = Instantiate(projectile, turretHead.transform.position, Quaternion.identity);
+            bala.transform.LookAt(enemyObjective.transform.position, Vector3.up);
             //bala.transform.TransformDirection(enemyObjective.transform.position);
 
             LockOn = false;
-		}
+        }
+        else
+            LockOn = false;
+       
+
+
+	}
 
 	}

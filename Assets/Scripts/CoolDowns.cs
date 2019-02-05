@@ -157,7 +157,7 @@ namespace turretGame {
         {
             buttonMoneyMultiplier.tag = "used";
 
-            UIManager.dinero *= (int)1.3f;
+            UIManager.dinero *= 2;
         }
 
         public void button_speed_clicked()

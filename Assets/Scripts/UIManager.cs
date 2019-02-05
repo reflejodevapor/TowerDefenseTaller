@@ -9,9 +9,16 @@ public class UIManager : MonoBehaviour {
     public Image goVidaBase;
 
     public static float vidaBase = 100;
-    public static int dinero = 40;
+    public static int dinero = 100;
 
     public Text dineroTxt;
+
+
+    public void SalirATitulo()
+    {
+        SceneManager.LoadScene("MainTitle");
+
+    }
 
     /// <summary>
     /// Método para manejar cuando el enemigo llegó a la meta
@@ -58,12 +65,11 @@ public class UIManager : MonoBehaviour {
         }
             panelPausa.SetActive(estado);
             imagenBloqueadoraPaneles.SetActive(estado);
-    
+    }
 
-
- 
-
-
+    public void GoToNextLevel(int nivl)
+    {
+        SceneManager.LoadScene("Lvl" + nivl);
     }
 
     public void SetMusica(bool _estado)
